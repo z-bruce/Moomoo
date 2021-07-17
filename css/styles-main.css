@@ -92,7 +92,7 @@ header.container-fluid {
 }
 
 /* Banner */
-[role="container-fluid banner"] {
+[role="banner"] {
     background-color: #1089FF;
     margin: 25px;
     text-align: center;
