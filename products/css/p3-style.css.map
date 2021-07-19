@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": [
+        "p3-style.scss"
+    ],
+    "names": [],
+    "mappings": "AAKA;EACE;EACA",
+    "file": "p3-style.css"
+}
