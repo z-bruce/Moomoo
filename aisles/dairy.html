@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Include Google Icons/Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>MooMoo Grocery</title>
+    <link rel="icon" href="../images/moomoo.ico">
+    <link rel="stylesheet" type="text/css" href="../css/styles-main.css"/>
+  </head>
+  <body>
+    <!-- Header with menu -->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="../index.html"><img src="../images/moomoologo.png" alt="MooMoo Grocery Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarAisles" role="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Aisles
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarAisles">
+                      <a class="dropdown-item" href="#">Fruits/Vegetables</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Breads/Pastries</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Meat/Fish</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="dairy.html">Dairy/Eggs</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Beverages</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="register-link" href="#">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="material-icons md-24">shopping_cart</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <section class="container-fluid aisle-title">
+    <!-- Aisle Title -->   
+    </section>
+    <section class="jumbotron jumbotron-dairy">
+        <div class="container">
+            <h1 class="aisle-title">Dairy and Eggs</h1>
+        </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="featured-products aisle-featured">
+        <h2>Featured Products</h2>
+        <hr />
+        <div class="container">
+            <!-- Cheese Section -->
+            <h4>Cheese Products</h4>
+            <div class="row featured-products-cards">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/swiss.png" class="card-img-top" alt="Swiss Cheese">
+                        <div class="card-body">
+                            <h4 class="card-title">Swiss Cheese</h4>
+                            <p class="card-text">Swiss Gruyere &#8211; 400 g</p>
+                            <p class="card-text card-price">&#36;10.60</p>
+                            <p class="card-text"><small class="text-muted">&#36;2.65 / 100 g</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/gouda.png" class="card-img-top" alt="Gouda Cheese">
+                        <div class="card-body">
+                            <h4 class="card-title">Gouda Cheese</h4>
+                            <p class="card-text">Der Scharfe Maxx &#8211; 198 g</p>
+                            <p class="card-text card-price">&#36;7.49</p>
+                            <p class="card-text"><small class="text-muted">&#36;3.78 / 100 g</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/blue-cheese.png" class="card-img-top" alt="Blue Cheese">
+                        <div class="card-body">
+                            <h4 class="card-title">Blue Cheese</h4>
+                            <p class="card-text">Saint Augur Blue &#8211; 125 g</p>
+                            <p class="card-text card-price">&#36;6.49</p>
+                            <p class="card-text"><small class="text-muted">&#36;5.19 / 100 g</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- Egg Section - holds two cards instead of three with current styling -->
+            <h4>Egg Products</h4>
+            <div class="row featured-products-cards">  
+                <div class="col-sm-12 col-md-6 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/eggs.png" class="card-img-top" alt="Brown Eggs">
+                        <div class="card-body">
+                            <h4 class="card-title">Large Brown Eggs</h4>
+                            <p class="card-text">Nutri Brown &#8211; 12 EA</p>
+                            <p class="card-text card-price">&#36;4.69</p>
+                            <p class="card-text"><small class="text-muted">&#36;0.33 / ea</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/white-eggs.png" class="card-img-top" alt="White Eggs">
+                        <div class="card-body">
+                            <h4 class="card-title">Medium White Eggs</h4>
+                            <p class="card-text">Nutri Omega-3 White &#8211; 12 EA</p>
+                            <p class="card-text card-price">&#36;4.79</p>
+                            <p class="card-text"><small class="text-muted">&#36;0.40 / ea</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- Milk Products Section -->
+            <h4>Milk Products</h4>
+            <div class="row featured-products-cards">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/milk.png" class="card-img-top" alt="Milk">
+                        <div class="card-body">
+                            <h4 class="card-title">Natural Milk</h4>
+                            <p class="card-text">Itambe Natural &#8211; 1 l</p>
+                            <p class="card-text card-price">&#36;4.19</p>
+                            <p class="card-text"><small class="text-muted">&#36;0.42 / 100 ml</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/yogurt.png" class="card-img-top" alt="Yogurt">
+                        <div class="card-body">
+                            <h4 class="card-title">Greek Yogurt</h4>
+                            <p class="card-text">Chobani Bluberry &#8211; 4 x 100 g</p>
+                            <p class="card-text card-price">&#36;6.99</p>
+                            <p class="card-text"><small class="text-muted">&#36;1.05 / 100 g</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <img src="../images/ice-cream.png" class="card-img-top" alt="Ice cream">
+                        <div class="card-body">
+                            <h4 class="card-title">Ice Cream</h4>
+                            <p class="card-text">Lewis Road Creamery &#8211; 500 ml</p>
+                            <p class="card-text card-price">&#36;6.79</p>
+                            <p class="card-text"><small class="text-muted">&#36;1.36 / 100 ml</small></p>
+                            <a href="#">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="container footer">
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a class="nav-link" href="https://twitter.com/?lang=en" target="_blank">Twitter</a>
+            <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a class="nav-link" href="https://www.pinterest.ca/" target="_blank">Pinterest</a>
+        </nav>
+        <p class="card-text"><small class="text-muted">Photos contributors: <a href="https://unsplash.com/@helloimnik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+            Hello I'm Nik</a> on <a href="https://unsplash.com/s/photos/eggs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>, 
+            <a href="https://unsplash.com/@jainath?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jainath Ponnala</a> on 
+            <a href="https://unsplash.com/s/photos/yogurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>, 
+            <a href="https://unsplash.com/@jeztimms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jez Timms</a> on 
+            <a href="https://unsplash.com/s/photos/cheese?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>, 
+            <a href="https://unsplash.com/@dev_irl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dev Benjamin</a> on 
+            <a href="https://unsplash.com/s/photos/tub-of-ice-cream?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>, and 
+            by Polina Tankilevitch from Pexels, NastyaSensei from Pexels, ROMAN ODINTSOV from Pexels</small></p>
+    </footer> 
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>
