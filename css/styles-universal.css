@@ -1,0 +1,84 @@
+/* Site Colors: Dark grey: #303841, medium-grey: #3A4750, red: #D72323 blue: #1089FF */
+
+/* simple selector styling */
+
+body {
+    font-family: roboto, Arial, Helvetica, "Droid Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    color: #303841;
+    padding: 15px;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+    padding: 2%;
+}
+
+hr {
+    border-bottom: #D72323 inset 1px;
+    margin: auto;
+    width: 15%;
+}
+
+/* footer */
+.footer {
+    background-color: #303841;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a:link,
+.footer a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #D72323;
+}
+
+.footer a:active {
+    color: #a71f1f;
+    text-decoration: underline;
+}
+
+.footer p {
+    padding: 2.5em 0 .5em;
+    text-align: center;
+}
+
+/* ---- Media Queries in addition to the Bootstrap Queries ---- */
+
+@media (min-width: 576px) {
+    .footer {
+        max-width: 98%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        max-width: 98%;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        max-width: 98%;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .footer {
+        max-width: 98%;
+    }
+}
