@@ -29,11 +29,17 @@ hr {
     width: 15%;
 }
 
+/* Main section */
+main {
+    margin-bottom: 20px;
+}
+
 /* footer */
 .footer {
     background-color: #303841;
     text-align: center;
     padding: 20px;
+    margin-bottom: 0;
 }
 
 .footer a:link,
