@@ -1,3 +1,8 @@
+/* p1, p2 specific simple selector styles */
+h3 {
+    color: #fff;
+    padding: 2%;
+}
 
 /* header section */
 header.container-fluid {

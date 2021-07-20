@@ -17,15 +17,25 @@
     <link rel="icon" href="../images/moomoo.ico" />
     <link rel="stylesheet" href="../css/styles-universal.css" />
     <link rel="stylesheet" href="../css/p3-style.css" />
+    <!-- A few additional styles -->
+    <style>
+        .jumbotron {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../images/swiss.png);
+
+        }
+
+        .product-size {
+            width: fit-content;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation bar linking to home and menus -->
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="#">
-                <img src="https://raw.githubusercontent.com/SephoraM/Moomoo/main/images/moomoologo.png"
-                    alt="MooMooGrocery Logo" />
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/moomoologo.png" alt="MooMooGrocery Logo" />
             </a>
 
             <!-- Button toggler to set navbar items into toggle for mobile pages -->
@@ -44,8 +54,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Produce</a>
                             <a class="dropdown-item" href="#">Bakery</a>
-                            <a class="dropdown-item" href="#">Meat and Fish</a>
-                            <a class="dropdown-item" href="#">Dairy and Eggs</a>
+                            <a class="dropdown-item" href="#">Meat and Poultry</a>
+                            <a class="dropdown-item" href="../aisles/dairy.html">Dairy and Eggs</a>
                             <a class="dropdown-item" href="#">Beverages</a>
                         </div>
                     </li>
@@ -70,51 +80,47 @@
             </div>
         </nav>
     </header>
-
-    <!-- Contain the name of the aisle in which the product is located. -->
     <main>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
-                <h1 class="display-5 text-white">Product Page Template</h1>
+                <h1 class="display-5 text-white">Cheese Products</h1>
             </div>
         </div>
-
-        <!-- Nav breadcrumbs to go back to upper directory -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Aisles</a></li>
-                <li class="breadcrumb-item"><a href="#">Aisle Name</a></li>
+                <li class="breadcrumb-item"><a href="../index.html">Aisles</a></li>
+                <li class="breadcrumb-item"><a href="../aisles/dairy.html">Aisle Name</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Product Name
+                    Swiss Gruyere
                 </li>
             </ol>
         </nav>
-
-        <!-- Main content -->
         <div class="container-fluid">
             <div class="row">
-                <!-- Product image -->
                 <div class="col-md-6" id="productImage">
-                    <img src="https://images.pexels.com/photos/461060/pexels-photo-461060.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                        class="img-fluid" alt="Image of product." />
+                    <img src="../images/swiss.png" class="img-fluid" alt="Swiss Cheese" />
                 </div>
-
-                <!-- Product description, pricing, quantity, add to cart button. -->
                 <div class="col-md-6" id="productDescription">
-                    <h3>Product Name</h3>
-                    <h5>Product Weight</h5>
-                    <h6>Product Cost per Unit</h6>
-                    <p>
-                        This will be a short description about the product.
-                    </p>
-                    <h5>Price</h5>
+                    <h3>Swiss Gruyere</h3>
+                    <h5>400 g</h5>
+                    <h6><small class="text-muted">Price Per Unit: &#36;2.65 / 100 g</small></h6>
+                    <h5>&#36;10.60</h5>
                     <form>
+                        <select class="custom-select custom-select-lg mb-3 product-size">
+                            <option value="1">Size - 100 g</option>
+                            <option value="2">Size - 200 g</option>
+                            <option selected>Size - 400 g</option>
+                            <option value="3">Size - 600 g</option>
+                        </select>
                         <div class="form-group w-25">
                             <input class="form-control form-control-lg" type="number" min="1" placeholder="1" />
                             <label for="quantity">Quantity</label>
                         </div>
                     </form>
-
+                    <p>
+                        Sharp and flavourful, Swiss Gruyere is made from raw cow's millk and imported from Switzerland.
+                        Aged for 300 days.
+                    </p>
                     <button type="button" class="btn btn-outline-dark">
                         More Description
                     </button>
