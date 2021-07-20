@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 
-/* Column Setup */
 [class*="col-"] {
   float: left;
   padding: 15px;
@@ -23,7 +22,7 @@
   display: table;
 }
 
-/* Basic Styling */
+/* styling */
 a {
   color: #303841;
 }
@@ -106,7 +105,7 @@ select {
   color: white;
 }
 
-/* Backstore Form (Edit Properties of User/Product/Order) */
+/* Backstore Form (Edit Properties) */
 .properties {
   line-height: 2;
 }
@@ -166,6 +165,10 @@ select {
   width: 60%;
 }
 
+.backstore-list a.edit-button:hover {
+  background-color: #1089FF;
+}
+
 .backstore-list a:hover {
   background-color: #D72323;
   border-radius: 5px;
@@ -200,7 +203,7 @@ select {
   color: white;
 }
 
-/* Desktop View */
+/* Desktop */
 @media only screen and (min-width: 768px) {
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
