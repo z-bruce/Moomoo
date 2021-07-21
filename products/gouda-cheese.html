@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Sephora Maltais 40151723" />
+
+    <!--Link Bootstrap 4 styling to document-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+    <!-- Link Google's Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <title>Product | Gouda Cheese</title>
+    <link rel="icon" href="../images/icon-moo.png" />
+    <link rel="stylesheet" href="../css/styles-universal.css" />
+    <link rel="stylesheet" href="../css/p3-style.css" />
+    <!-- A few additional styles -->
+    <style>
+        .jumbotron {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../images/gouda.png);
+
+        }
+
+        .product-size {
+            width: fit-content;
+        }
+
+        h6 {
+            color: #303841;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- header section with nav bar -->
+    <header class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/moomoologo.png" alt="MooMooGrocery Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <!-- Aisles on left side of navbar -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" href="#">Aisles</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Produce</a>
+                            <a class="dropdown-item" href="../aisles/bakery.html">Bakery</a>
+                            <a class="dropdown-item" href="#">Meat and Fish</a>
+                            <a class="dropdown-item" href="../aisles/dairy.html">Dairy and Eggs</a>
+                            <a class="dropdown-item" href="#">Beverages</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-icons md-24">shopping_cart
+                            </span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h1 class="display-5 text-white">Cheese Products</h1>
+            </div>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../aisles/dairy.html">Dairy and Eggs</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Der Scharfe Maxx
+                </li>
+            </ol>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" id="productImage">
+                    <img src="../images/gouda.png" class="img-fluid" alt="Gouda Cheese" />
+                </div>
+                <div class="col-md-6" id="productDescription">
+                    <h3>Der Scharfe Maxx</h3>
+                    <h5>198 g</h5>
+                    <h6>Price Per Unit: &#36;3.78 / 100 g</h6>
+                    <p>
+                        Sweet and creamy, Der Scharfe Maxx is made from raw cow's millk and imported from Finland.
+                        Aged for 2 years.
+                    </p>
+                    <h5>&#36;7.49</h5>
+                    <form>
+                        <select class="custom-select custom-select-lg mb-3 product-size">
+                            <option value="1">Size - 48 g</option>
+                            <option value="2">Size - 128 g</option>
+                            <option selected>Size - 198 g</option>
+                            <option value="3">Size - 364 g</option>
+                        </select>
+                        <div class="form-group w-25">
+                            <input class="form-control form-control-lg" type="number" min="1" placeholder="1" />
+                            <label for="quantity">Quantity</label>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-outline-dark">
+                        More Description
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container footer mt-auto">
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a class="nav-link" href="https://twitter.com/?lang=en" target="_blank">Twitter</a>
+            <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a class="nav-link" href="https://www.pinterest.ca/" target="_blank">Pinterest</a>
+        </nav>
+        <p class="card-text">
+            <small class="text-muted">Photos contributors:
+                <a
+                    href="https://unsplash.com/@alanaharris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alana
+                    Harris</a> on <a
+                    href="https://unsplash.com/s/photos/cheese?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </small>
+        </p>
+    </footer>
+
+    <!-- Optional JavaScript functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

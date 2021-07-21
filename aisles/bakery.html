@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="author" content="John Lin 40151723" />
+        <meta name="description" content="P2 Bakery Aisle" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+
+        <!-- Include Google Icons/Fonts -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>MooMoo Grocery | Bakery</title>
+        <link
+            rel="icon"
+            href="../images/icon-moo.png"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../css/styles-universal.css"
+        />
+        <link rel="stylesheet" type="text/css" href="../css/styles-main.css" />
+    </head>
+
+    <body>
+        <!-- Header with menu -->
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand" href="../index.html"
+                    ><img
+                        src="../images/moomoologo.png"
+                        alt="MooMooGrocery Logo"
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarMenu"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarAisles"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                Aisles
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarAisles"
+                            >
+                                <a class="dropdown-item" href="#">Produce</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="bakery.html">Bakery</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"
+                                    >Meat and Poultry</a
+                                >
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="dairy.html"
+                                    >Dairy and Eggs</a
+                                >
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Beverages</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-link" href="#"
+                                >Register</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                ><span class="material-icons md-24"
+                                    >shopping_cart</span
+                                ></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Aisle Title -->
+        <section class="jumbotron jumbotron-bread">
+            <div class="container">
+                <h1 class="aisle-title">Bakery</h1>
+            </div>
+        </section>
+        <!-- Featured Products -->
+        <section class="featured-products aisle-featured">
+            <h2>Featured Products</h2>
+            <hr />
+            <div class="container">
+                <!-- Bread Section -->
+                <h4>Bread</h4>
+                <div class="row featured-products-cards">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="../images/multigrain.jpg"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Multigrain Sliced Bread"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Multigrain Sliced Bread
+                                </h4>
+                                <p class="card-text">
+                                    Multigrain Sliced Bread &#8211; 400 g
+                                </p>
+                                <p class="card-text card-price">&#36;3.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;0.67 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/multigrain.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="https://images.pexels.com/photos/461060/pexels-photo-461060.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Baguette"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Baguette</h4>
+                                <p class="card-text">Baguette &#8211; 300 g</p>
+                                <p class="card-text card-price">&#36;2.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;1.00/ 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/baguette.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="https://images.pexels.com/photos/3850997/pexels-photo-3850997.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Sourdough"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Sourdough Loaf</h4>
+                                <p class="card-text">
+                                    Sourdough Loaf &#8211; 700 g
+                                </p>
+                                <p class="card-text card-price">&#36;4.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;0.71 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/sourdough.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <!-- Pastries - holds two cards instead of three with current styling -->
+                <h4>Pastries</h4>
+                <div class="row featured-products-cards">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="../images/donut.jpg"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Doughnuts"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Doughnuts</h4>
+                                <p class="card-text">
+                                    Glazed Doughnuts &#8211; 6
+                                </p>
+                                <p class="card-text card-price">&#36;5.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;1.00 / ea</small
+                                    >
+                                </p>
+                                <a href="../products/donut.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Croissants"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Croissants, Half-Dozen
+                                </h4>
+                                <p class="card-text">
+                                    Butter Croissants &#8211; 6
+                                </p>
+                                <p class="card-text card-price">&#36;5.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;1.66 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/croissant.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <!-- Desserts Section -->
+                <h4>Desserts</h4>
+                <div class="row featured-products-cards">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Cake"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Chocolate Cake 8-inch
+                                </h4>
+                                <p class="card-text">
+                                    Chocolate Cake &#8211; 1.25 kg
+                                </p>
+                                <p class="card-text card-price">&#36;24.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;2.00 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/cake.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="../images/pie.jpg"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Pie"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Apple Pie</h4>
+                                <p class="card-text">Apple Pie &#8211; 500 g</p>
+                                <p class="card-text card-price">&#36;4.79</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;0.96 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/pie.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card mb-3 h-100">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <img
+                                    src="../images/cookie.jpg"
+                                    class="card-img-top embed-responsive-item"
+                                    alt="Cookies"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Cookies, Dozen</h4>
+                                <p class="card-text">
+                                    Chocolate Chip &#8211; 12
+                                </p>
+                                <p class="card-text card-price">&#36;4.99</p>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                        >&#36;0.85 / 100 g</small
+                                    >
+                                </p>
+                                <a href="../products/cookie.html"
+                                    >Go to Product Page</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="container-fluid footer">
+            <nav class="nav justify-content-center">
+                <a
+                    class="nav-link"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    >Facebook</a
+                >
+                <a
+                    class="nav-link"
+                    href="https://twitter.com/?lang=en"
+                    target="_blank"
+                    >Twitter</a
+                >
+                <a
+                    class="nav-link"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    >Instagram</a
+                >
+                <a
+                    class="nav-link"
+                    href="https://www.pinterest.ca/"
+                    target="_blank"
+                    >Pinterest</a
+                >
+            </nav>
+            <p class="card-text">
+                <small class="text-muted"
+                    >Photos contributors:
+                    <a href="https://www.pexels.com/@pixabay">Pixabay</a>
+                    on
+                    <a
+                        href="https://www.pexels.com/photo/food-france-morning-breakfast-2135/"
+                        >Pexels</a
+                    >
+                    and
+                    <a
+                        href="https://www.pexels.com/photo/baguette-bakery-blur-bread-461060/"
+                        >here</a
+                    >,
+                    <a href="https://www.pexels.com/@readymade">ready made</a>
+                    on
+                    <a
+                        href="https://www.pexels.com/photo/bread-on-brown-wooden-chopping-board-3850997/"
+                        >Pexels</a
+                    >,
+                    <a href="https://unsplash.com/@xandreaswork"
+                        >xandreaswork</a
+                    >
+                    on
+                    <a href="https://unsplash.com/photos/NH2S3zVPMaE"
+                        >Unsplash</a
+                    >,
+                    <a href="https://www.pexels.com/@alexander-dummer-37646"
+                        >Alexander Dummer</a
+                    >
+                    on
+                    <a
+                        href="https://www.pexels.com/photo/chocolate-cake-on-top-of-white-ceramic-plate-132694/"
+                        >Pexels</a
+                    >,
+                    <a href="https://unsplash.com/@nebe3etogo">Danil Aksenov</a>
+                    on
+                    <a href="https://unsplash.com/photos/bkXzABDt08Q"
+                        >Unsplash</a
+                    >,
+                    <a href="https://unsplash.com/@debbiewidjaja"
+                        >Debbie Widjaja</a
+                    >
+                    on
+                    <a href="https://unsplash.com/photos/4zThEOr1VDE"
+                        >Unsplash</a
+                    ></small
+                >
+            </p>
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
