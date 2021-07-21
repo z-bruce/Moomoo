@@ -1,0 +1,152 @@
+body{
+    background-color: #f7e0da ;
+    background-image: url("https://images.pexels.com/photos/4022091/pexels-photo-4022091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.title{
+    font-family: inherit;
+    text-align: center; 
+    color: white;
+    
+}
+
+header{
+    width:100%;
+    background-color:white;
+}
+
+#wrapper{
+  max-width: 60%;
+  margin: auto;
+  align-content: center;
+  display: table;
+}
+
+.shopping-cart{
+   /* border:10px;
+    border-color: red;
+    border-style: solid; */
+    width: relative; 
+    float: left;
+    display:relative;
+    
+}
+
+.order-summary{
+    position: relative;
+    width: relative;
+    float:right;
+    display:relative;
+    
+    
+
+}
+
+.product{
+    border-radius: 8px;
+    display: flex; 
+    background-color: white;
+    padding: 8px;
+    margin: 8px;
+    margin-left: 50px;
+    font: 'Open Sans'; 
+    position: relative;
+    
+}
+
+.product:hover{
+    border: none;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	transform: scale(1.01);
+
+}
+
+.name>a:link{
+    border: none;
+	transform: scale(1.01);
+    color:#3f3f3f;
+    text-decoration: none;
+}
+
+.name>a:visited{
+    color:#3f3f3f;
+    text-decoration: none;
+
+}
+
+.name>a:hover{
+    border: none;
+	transform: scale(1.01);
+    color:#cc0009;
+}
+
+.product-picture{
+    width: 200px;
+	height: 200px;
+	object-fit: cover;
+    display:flex; 
+    padding: 10px;
+    position:relative;
+}
+
+.product-description, .order{
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+  display: relative;
+
+  
+}
+
+.remove {
+	position:static;
+    display: flex;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 25px;
+	background-color: white;
+	color:#3f3f3f;
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+.remove:hover, .checkout:hover, .back-to-shopping:hover{
+
+	background-color: white;
+	color: #cc0009;
+	font-weight: 600;
+	border: 1px solid #cc0009;
+
+}
+
+.checkout, .back-to-shopping {
+    display:inline-block;
+    bottom: 20px;
+	right: 20px;
+	padding: 10px 25px;
+	background-color: white;
+	color:#3f3f3f;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.order{
+    border-radius: 8px;
+    text-align: center ;
+    background-color: #f0eded;
+    height: relative;
+    padding: 10px;
+    margin: 8px;
+    margin-left: 10px;
+    font: 'Open Sans'; 
+    color: #3f3f3f;
+    font-size: 20px;
+    width: relative;  
+}
+
+.total{
+    color:#cc0009;
+}

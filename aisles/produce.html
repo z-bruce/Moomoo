@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Krishna Patel 40176352" />
+    <meta name="description" content="P2 Produce aisle" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Include Google Icons/Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Produce Aisle</title>
+    <link rel="icon" href="../images/icon-moo.png">
+    <link rel="stylesheet" type="text/css" href="../css/styles-universal.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-main.css" />
+</head>
+
+<body>
+    <!-- Header with menu -->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="../index.html"><img src="../images/moomoologo.png"
+                    alt="MooMoo Grocery Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarAisles" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Aisles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarAisles">
+                            <a class="dropdown-item" href="produce.html">Produce</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="bakery.html">Bakery</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="meat.html">Meat and Poultry</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="dairy.html">Dairy and Eggs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="beverages.html">Beverages</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Login.html">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="register-link" href="../SignUp.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cart.html"><span
+                                class="material-icons md-24">shopping_cart</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Aisle Title -->
+    <section class="jumbotron jumbotron-produce">
+        <div class="container">
+            <h1 class="aisle-title">Fruits and Vegetables</h1>
+        </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="featured-products aisle-featured">
+        <h2>Featured Products</h2>
+        <hr />
+        <div class="container">
+            <!-- Fruit Section -->
+            <h4>Fruits</h4>
+            <div class="row featured-products-cards">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/apple.jpg" class="card-img-top embed-responsive-item" alt="apple">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Apple</h4>
+                            <p class="card-text">Single Red Apple &#8211; 0.13 - 0.18kg</p>
+                            <p class="card-text card-price">&#36;0.79</p>
+                            <p class="card-text"><small class="text-muted">&#36;4.34 / 1kg</small></p>
+                            <a href="../products/apples.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/banana.jpg" class="card-img-top embed-responsive-item" alt="banana">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Banana</h4>
+                            <p class="card-text">Single Banana &#8211; 0.15 - 0.23 kg</p>
+                            <p class="card-text card-price">&#36;0.28</p>
+                            <p class="card-text"><small class="text-muted">&#36;1.23 / 1kg</small></p>
+                            <a href="../products/bananas.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/pear.jpg" class="card-img-top embed-responsive-item" alt="pear">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Pear</h4>
+                            <p class="card-text">Single Green Pear &#8211; 0.17 - 0.20 kg</p>
+                            <p class="card-text card-price">&#36;0.87</p>
+                            <p class="card-text"><small class="text-muted">&#36;4.34 / 1 kg</small></p>
+                            <a href="../products/pear.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- Egg Section - holds two cards instead of three with current styling -->
+            <h4>Vegetables</h4>
+            <div class="row featured-products-cards">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/carrots.jpg" class="card-img-top embed-responsive-item" alt="Carrots">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Carrots</h4>
+                            <p class="card-text">Bag of Carrots &#8211; 1.36kg/bag</p>
+                            <p class="card-text card-price">&#36;1.97</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <a href="../products/carrot.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/radish.jpg" class="card-img-top embed-responsive-item" alt="Radishes">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Radish</h4>
+                            <p class="card-text">Red Radishes &#8211; Sold in bunches</p>
+                            <p class="card-text card-price">&#36;0.79</p>
+                            <p class="card-text"><small class="text-muted">&#36;0.79 / ea</small></p>
+                            <a href="../products/radish.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card mb-3 h-100">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="../images/tomato.jpg" class="card-img-top embed-responsive-item" alt="tomato">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Tomato</h4>
+                            <p class="card-text">Beefstake Red Tomatoes &#8211; 0.12 - 0.28 kg</p>
+                            <p class="card-text card-price">&#36;0.91</p>
+                            <p class="card-text"><small class="text-muted">&#36;3.24 / kg</small></p>
+                            <a href="../products/tomato.html">Go to Product Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- Milk Products Section -->
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="container footer">
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a class="nav-link" href="https://twitter.com/?lang=en" target="_blank">Twitter</a>
+            <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a class="nav-link" href="https://www.pinterest.ca/" target="_blank">Pinterest</a>
+        </nav>
+
+    </footer>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
