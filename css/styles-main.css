@@ -9,10 +9,6 @@ header.container-fluid {
     border-bottom: #D72323 inset 1px;
 }
 
-.nav-item {
-    padding: 0 15px;
-}
-
 #register-link {
     color: #1089FF;
 }

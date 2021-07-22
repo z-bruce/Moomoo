@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="John Lin 40151723" />
+    <meta name="author" content="John Lin 40176227" />
     <meta name="description" content="P7 Product List" />
 
     <title>Product List | MooMoo Grocery</title>
@@ -16,6 +16,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
         rel="stylesheet" />
+
+        <style>
+            a.add-product {
+                background-color: lightgrey;
+                border-radius: 5px;
+                display: block;
+                float: left;
+                margin: 0 0 20px;
+                padding: 10px 15px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            a.add-product:hover,
+            a.edit-action:hover {
+                background-color: #1089ff;
+                color: white;
+            }
+        </style>   
 </head>
 
 <body>
@@ -54,6 +73,8 @@
         <div class="col-10">
             <h1>Product List</h1>
             <h3>Inventory</h3>
+            <!-- Add product button -->
+            <a class="add-product" href="product-edit.html">Add Product</a>
             <table class="backstore-list">
                 <tr class="backstore-table-header-row">
                     <th class="backstore-table-header">Serial Number</th>
@@ -64,7 +85,6 @@
                     <th class="backstore-table-header hide-mobile">
                         Current Inventory
                     </th>
-                    <th class="backstore-table-header">Add</th>
                     <th class="backstore-table-header">Edit</th>
                     <th class="backstore-table-header">Delete</th>
                 </tr>
@@ -73,7 +93,6 @@
                     <td>Baguette</td>
                     <td class="hide-mobile">$2.99</td>
                     <td class="hide-mobile">90</td>
-                    <td><a href="product-edit.html">Add</a></td>
                     <td>
                         <a class="edit-button" href="product-edit.html">Edit</a>
                     </td>
@@ -84,7 +103,6 @@
                     <td>Multigrain Sliced Bread</td>
                     <td class="hide-mobile">$3.99</td>
                     <td class="hide-mobile">57</td>
-                    <td><a href="product-edit.html">Add</a></td>
                     <td>
                         <a class="edit-button" href="product-edit.html">Edit</a>
                     </td>
@@ -95,7 +113,6 @@
                     <td>Sourdough Loaf</td>
                     <td class="hide-mobile">$4.99</td>
                     <td class="hide-mobile">32</td>
-                    <td><a href="product-edit.html">Add</a></td>
                     <td>
                         <a class="edit-button" href="product-edit.html">Edit</a>
                     </td>
@@ -106,7 +123,6 @@
                     <td>Doughnuts</td>
                     <td class="hide-mobile">$5.99</td>
                     <td class="hide-mobile">11</td>
-                    <td><a href="#">Add</a></td>
                     <td>
                         <a class="edit-button" href="product-edit.html">Edit</a>
                     </td>
@@ -117,7 +133,6 @@
                     <td>Croissants, Half-Dozen</td>
                     <td class="hide-mobile">$5.99</td>
                     <td class="hide-mobile">7</td>
-                    <td><a href="product-edit.html">Add</a></td>
                     <td>
                         <a class="edit-button" href="product-edit.html">Edit</a>
                     </td>

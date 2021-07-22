@@ -29,6 +29,11 @@ hr {
     width: 15%;
 }
 
+/* header section */
+.nav-item {
+    padding: 0 15px;
+}
+
 /* Main section */
 main {
     margin-bottom: 20px;
