@@ -1,6 +1,6 @@
 # Moomoo Grocery
 
-## Live Website: [Link to MooMooGrocery.live](https://www.moomoogrocery.live/)
+## Live Website: [MooMooGrocery.live](https://www.moomoogrocery.live/)
 
 Team members:
 
