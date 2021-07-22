@@ -2,11 +2,11 @@
 
 Team members:
 
-Sephora Maltais, 40151723
-John Lin, 40176227
-Zachary Bruce, 40136585
-Youngjae Kim, 40169282
-Krishna Patel, 40176352
+Sephora Maltais 40151723,
+John Lin 40176227,
+Zachary Bruce 40136585,
+Youngjae Kim 40169282,
+Krishna Patel 40176352
 
 ## Website uses Bootstrap 4
 
