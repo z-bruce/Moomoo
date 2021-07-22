@@ -1,57 +1,45 @@
-<DOCTYPE! html>
-    <!--page 4 html - shopping cart of the store -->
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <title> MooMooGrocery Shopping Cart </title>
-        <link rel="icon" href="images/icon-moo.png">
-        <meta charset="utf-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Krishna Patel 40176352" />
+    <meta name="description" content="P4 Shopping Cart" />
+
+    <title> MooMooGrocery Shopping Cart </title>
+    <link rel="icon" href="images/icon-moo.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Include Google Icons/Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
 
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Krishna Patel 40176352" />
-        <meta name="description" content="P4 Shopping Cart" />
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles-universal.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles-main.css" />
+    <link rel="stylesheet" type="text/css" href="css/p4-style.css" />
+</head>
 
-        <!-- Include Google Icons/Fonts -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <a class="navbar-brand" href="index.html"><img src="images/moomoologo.png" alt="MooMoo Grocery Logo"></a>
+    </header>
+    <div id="wrapper">
 
-   
-        
-        <link rel="stylesheet" type="text/css" href="css/styles-universal.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles-main.css" />
-
-        <link rel="stylesheet" type="text/css" href="css/p4-style.css" />
-
-    </head>
-
-    <body>
-         <header>
-          <a class="navbar-brand" href="index.html"><img src="images/moomoologo.png"
-                  alt="MooMoo Grocery Logo"></a>
-  </header>
-        <div id="wrapper">
-
-            <div class="shopping-cart">
-                <h2 class="title">Shopping Cart </h2>
-                <div class="product">
-                    <img class="product-picture" src=images/pear.jpg> <div class="product-description">
-                    <h3 class="name"><a href="products/pear.html">Pear</a></h3>
-                    <h4 class="price">Price: $0.90</h4>
-                    <p class="quantity"> Quantity: <input class="quantity" type="number" min="1" placeholder="1"> </p>
-                    <button class="remove" type="button">Remove</button>
-                </div>
-            </div>
-
+        <div class="shopping-cart">
+            <h2 class="title">Shopping Cart </h2>
             <div class="product">
-                <img class="product-picture" src=images/apple.jpg> <div class="product-description">
-                <h3 class="name"><a href="products/apples.html">Apple</a></h3>
+                <img class="product-picture" src=images/pear.jpg> <div class="product-description">
+                <h3 class="name"><a href="products/pear.html">Pear</a></h3>
                 <h4 class="price">Price: $0.90</h4>
                 <p class="quantity"> Quantity: <input class="quantity" type="number" min="1" placeholder="1"> </p>
                 <button class="remove" type="button">Remove</button>
@@ -59,38 +47,42 @@
         </div>
 
         <div class="product">
-            <img class="product-picture" src=images/radish.jpg> <div class="product-description">
-            <h3 class="name"><a href="products/radish.html">Radish</a></h3>
+            <img class="product-picture" src=images/apple.jpg> <div class="product-description">
+            <h3 class="name"><a href="products/apples.html">Apple</a></h3>
             <h4 class="price">Price: $0.90</h4>
             <p class="quantity"> Quantity: <input class="quantity" type="number" min="1" placeholder="1"> </p>
             <button class="remove" type="button">Remove</button>
         </div>
+    </div>
+
+    <div class="product">
+        <img class="product-picture" src=images/radish.jpg> <div class="product-description">
+        <h3 class="name"><a href="products/radish.html">Radish</a></h3>
+        <h4 class="price">Price: $0.90</h4>
+        <p class="quantity"> Quantity: <input class="quantity" type="number" min="1" placeholder="1"> </p>
+        <button class="remove" type="button">Remove</button>
+    </div>
+    </div>
+    <div class="end"> </div>
+    </div>
+
+    <div class="order-summary">
+        <h2 class="title"> Order Summary </h2>
+        <div class="order">
+            <p class="nb-products">Total number of items: 000</p>
+            <p class="sub-total">Sub-Total: 0000</p>
+            <p class="GST">GST : 000000</p>
+            <p class="QST">QST : 000000</p>
+            <hr>
+            <h3 class="total">TOTAL COST: $00000</h3>
+
+            <a href="#"><button class="checkout" type="button">Checkout</button></a>
+
+            <a href="index.html"><button class="back-to-shopping" type="button">Back to shopping</button></a>
+
         </div>
-        <div class="end"> </div>
-        </div>
+    </div>
+    </div>
+</body>
 
-
-
-        <div class="order-summary">
-            <h2 class="title"> Order Summary </h2>
-            <div class="order">
-                <p class="nb-products">Total number of items: 000</p>
-                <p class="sub-total">Sub-Total: 0000</p>
-                <p class="GST">GST : 000000</p>
-                <p class="QST">QST : 000000</p>
-                <hr>
-                <h3 class="total">TOTAL COST: $00000</h3>
-
-                <a href="#"><button class="checkout" type="button">Checkout</button></a>
-
-                <a href="index.html"><button class="back-to-shopping" type="button">Back to shopping</button></a>
-
-            </div>
-        </div>
-
-
-        </div>
-
-    </body>
-
-    </html>
+</html>
