@@ -15,6 +15,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .product-input{
+      width: 100%;
+      max-width: 80px;
+    }
+  
+    .quantity-input{
+      width: 100%;
+      max-width: 50px;
+    }
+  
+    .backstore-list{
+      width:100%;
+    }
+  
+    .hide-mobile-o{
+      display:none;
+    }
+  
+     /* Desktop View */
+     @media only screen and (min-width: 768px) {
+  
+        .hide-mobile-o {
+          display: table-cell;
+        }
+      }
+  </style>
 </head>
 
 <body>
@@ -59,56 +87,56 @@
           </div>
         </div>
 
-        <div class="col-12">
+        <div class="col-10">
       <table class="backstore-list">
         <tr class="backstore-table-header-row">
           <th class="backstore-table-header">Product ID</th>
-          <th class="backstore-table-header">Product Name</th>
+          <th class="backstore-table-header hide-mobile-o">Product Name</th>
           <th class="backstore-table-header">Quantity</th>
-          <th class="backstore-table-header">Price</th>
+          <th class="backstore-table-header hide-mobile-o">Price</th>
           <th class="backstore-table-header">Action</th>
         </tr>
         <tr>
           <td>123456</td>
-          <td>Pear</td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td>$0.87</td>
+          <td class="hide-mobile-o">Pear</td>
+          <td><input class="quantity-input" type="number" name="quantity" value=""></td>
+          <td  class="hide-mobile-o">$0.87</td>
           <td><a href="#">Delete</a></td>
         </tr>
         <tr>
           <td>123456</td>
-          <td>Pear</td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td>$0.87</td>
+          <td class="hide-mobile-o">Pear</td>
+          <td><input class="quantity-input" type="number" name="quantity" value=""></td>
+          <td  class="hide-mobile-o">$0.87</td>
           <td><a href="#">Delete</a></td>
         </tr>
         <tr>
           <td>123456</td>
-          <td>Pear</td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td>$0.87</td>
+          <td class="hide-mobile-o">Pear</td>
+          <td><input class="quantity-input" type="number" name="quantity" value=""></td>
+          <td  class="hide-mobile-o">$0.87</td>
           <td><a href="#">Delete</a></td>
         </tr>
         <tr>
           <td>123456</td>
-          <td>Pear</td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td>$0.87</td>
+          <td class="hide-mobile-o">Pear</td>
+          <td><input class="quantity-input" type="number" name="quantity" value=""></td>
+          <td  class="hide-mobile-o">$0.87</td>
           <td><a href="#">Delete</a></td>
         </tr>
         <tr>
           <td>123456</td>
-          <td>Pear</td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td>$0.87</td>
+          <td class="hide-mobile-o">Pear</td>
+          <td><input class="quantity-input" type="number" name="quantity" value=""></td>
+          <td  class="hide-mobile-o">$0.87</td>
           <td><a href="#">Delete</a></td>
         </tr>
         <tr>
           <td><input class="product-input" type="text" id="productID" name="productID" value=""></td>
-          <td><input class="product-input" type="text" id="productName" name="productName" value=""></td>
-          <td><input class="product-input" type="number" id="quantity" name="quantity" value=""></td>
-          <td><input class="product-input" type="text" id="productPrice" name="productPrice" value=""></td>
-          <td><a href="#">Add Product</a></td>
+          <td class="hide-mobile-o"><input class="product-input hide-mobile-o" type="text" id="productName" name="productName" value=""></td>
+          <td><input class="quantity-input" type="number" id="quantity" name="quantity" value=""></td>
+          <td class="hide-mobile-o"><input class="product-input hide-mobile-o" type="text" id="productPrice" name="productPrice" value=""></td>
+          <td><a href="">Add Product</a></td>
         </tr>
       </table>
       <!-- Empty Column -->
