@@ -27,7 +27,7 @@
   <!-- Navigation bar linking to home and menus -->
   <header class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../index.html">
         <img src="../images/moomoologo.png" alt="MooMooGrocery Logo" />
       </a>
 
@@ -101,19 +101,14 @@
             100% pure fresh cold pressed orange juice, not from concentrate, imported directly from Florida.
           </p>
           <h5>&#36;2.99</h5>
-          <form>
+          <form action="" method="POST">
             <div class="form-group w-25">
               <input class="form-control form-control-lg" type="number" min="1" placeholder="1" />
               <label for="quantity">Quantity</label>
             </div>
+            <button type="button" class="btn btn-outline-dark">More Description</button>
+            <input type="submit" class="btn btn-primary" value="Add to Cart" />
           </form>
-
-          <button type="button" class="btn btn-outline-dark">
-            More Description
-          </button>
-          <button type="button" class="btn btn-primary">
-            Add to Cart
-          </button>
         </div>
       </div>
     </div>

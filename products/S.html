@@ -159,16 +159,17 @@
                         <p>American Pork Sausages</p>
                        
                         <h5>$5.99</h5> 
-                        <label>Flavour: <select>
-                            <option>Original</option>
-                            <option>Barbeque</option>
-                            <option>Salty</option>
-                            <option>Spicy</option>
-                            <option>Maple Syrup</option>
-                            <option>Cheese</option>
-                           </select>
-                        </label>
-                        <form>
+                        
+                        <form action="" method="POST">
+                            <label>Flavour: <select>
+                                <option>Original</option>
+                                <option>Barbeque</option>
+                                <option>Salty</option>
+                                <option>Spicy</option>
+                                <option>Maple Syrup</option>
+                                <option>Cheese</option>
+                               </select>
+                            </label>
                             <div class="form-group w-25">
                                 <input
                                     class="form-control form-control-lg"
@@ -178,14 +179,9 @@
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                        </form>
-                           
-                        <button type="button" class="btn btn-outline-dark">
-                            More Description
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Add to Cart
-                        </button>
+                            <button type="button" class="btn btn-outline-dark">More Description</button>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        </form> 
                     </div>
                 </div>
             </div>

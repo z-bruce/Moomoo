@@ -158,14 +158,14 @@
                         <p>American Pork Bacons</p>
                        
                         <h5>$8.99</h5> 
-                        <label>Flavour: <select>
-                            <option>Original</option>
-                            <option>Barbeque</option>
-                            <option>Spicy</option>
-                            <option>Maple Syrup</option>
-                           </select>
-                        </label>
-                        <form>
+                        <form action="" method="POST">
+                            <label>Flavour: <select>
+                                <option>Original</option>
+                                <option>Barbeque</option>
+                                <option>Spicy</option>
+                                <option>Maple Syrup</option>
+                               </select>
+                            </label>
                             <div class="form-group w-25">
                                 <input
                                     class="form-control form-control-lg"
@@ -175,14 +175,9 @@
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
+                            <button type="button" class="btn btn-outline-dark">More Description</button>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
                         </form>
-                           
-                        <button type="button" class="btn btn-outline-dark">
-                            More Description
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Add to Cart
-                        </button>
                     </div>
                 </div>
             </div>

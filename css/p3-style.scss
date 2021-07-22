@@ -30,10 +30,17 @@ $default-padding: 25px;
 
 .img-fluid {
     object-fit: cover;
+    width: 500px;
     height: 500px;
     float: right;
 }
 
 .footer {
     margin-top: $default-padding * 2;
+}
+
+@media (max-width: 770px) {
+    .img-fluid {
+        float: none;
+    }
 }

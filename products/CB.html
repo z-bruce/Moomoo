@@ -166,17 +166,18 @@
                         <p>Pastured Chicken breasts</p>
                        
                         <h5>$8.99</h5> 
-                        <label>Flavour: <select>
-                            <option>Original</option>
-                            <option>Barbeque</option>
-                            <option>Salty</option>
-                           </select>
-                        </label>
-                        &nbsp; Degree of Freezing: 
-                        <label><input type="checkbox" checked="Checked"> Raw</label>
-                        <label><input type="checkbox"> Frozen</label>
-                        <label><input type="checkbox"> Defrost</label>
-                        <form>
+                        
+                        <form action="" method="POST">
+                            <label>Flavour: <select>
+                                <option>Original</option>
+                                <option>Barbeque</option>
+                                <option>Salty</option>
+                               </select>
+                            </label>
+                            &nbsp; Degree of Freezing: 
+                            <label><input type="checkbox" checked="Checked"> Raw</label>
+                            <label><input type="checkbox"> Frozen</label>
+                            <label><input type="checkbox"> Defrost</label>
                             <div class="form-group w-25">
                                 <input
                                     class="form-control form-control-lg"
@@ -186,14 +187,9 @@
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                        </form>
-                           
-                        <button type="button" class="btn btn-outline-dark">
-                            More Description
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Add to Cart
-                        </button>
+                            <button type="button" class="btn btn-outline-dark">More Description</button>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        </form> 
                     </div>
                 </div>
             </div>

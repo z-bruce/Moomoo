@@ -25,12 +25,19 @@
 
 .img-fluid {
     object-fit: cover;
+    width: 500px;
     height: 500px;
     float: right;
 }
 
 .footer {
     margin-top: 50px;
+}
+
+@media (max-width: 770px) {
+    .img-fluid {
+        float: none;
+    }
 }
 
 /*# sourceMappingURL=p3-style.css.map */
