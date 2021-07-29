@@ -1,0 +1,1 @@
+// javaScript for the Dairy and Eggs products
