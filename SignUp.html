@@ -7,7 +7,7 @@
     <meta name="description" content="signup" />
     <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            content="width=device-width, initial-scale=1, shrink-to-fit=No"
     />
     <title>Sign up page</title>
     <link rel="icon" href="images/icon-moo.png">
@@ -94,6 +94,12 @@
         .location {
             display: flex;
         }
+
+        @media (max-width: 800px) {
+            .location{
+                     flex-direction: column;
+                        }
+               }
 
         .Footer {
             background-image: url("images/loginpage.jfif");
