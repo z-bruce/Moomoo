@@ -41,7 +41,8 @@
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../images/steak.jpeg);
 
         }
-    </style>
+       </style>
+        <script type="text/javaScript" src="../js/meat-product.js"></script>
     </head>
     <body>
         <!-- Navigation bar linking to home and menus -->
@@ -155,7 +156,7 @@
                         <h6 style="color: #303841">
                             Price Per Unit: $3.75 / 100 g
                         </h6>
-                        <p>American Beef Steak cut</p>
+                        
                        
                         <h5>$14.99</h5> 
 
@@ -176,8 +177,9 @@
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                            <button type="button" class="btn btn-outline-dark">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                            <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');" /> 
+                            <p id="description" style="margin: 10px; font-style: italic; display: none;">Beef Steak cut of pastured American cow<br> <span style="color:gray; font-size:smaller;"> serial number: 40168822</span>  </p>   
                         </form> 
                     </div>
                 </div>
