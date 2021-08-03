@@ -3,3 +3,7 @@ function moreDescription() {
 
   desc.display == "none" ? desc.display = "block" : desc.display = "none";
 }
+
+function addedToCartAlert(productName) {
+  alert("Added " + productName + " to cart.");
+}
