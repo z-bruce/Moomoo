@@ -21,6 +21,9 @@
   <link rel="stylesheet" type="text/css" href="../css/styles-universal.css" />
   <link rel="stylesheet" href="../css/p3-style.css" />
 
+  <!-- JavaScript -->
+  <script type="text/javaScript" src="../js/beverage-products.js"></script>
+
 </head>
 
 <body>
@@ -97,18 +100,21 @@
           <h3>Jarritos Pineapple Soda</h3>
           <h5>6 x 370 mL</h5>
           <h6>&#36;0.247 / 100 mL</h6>
-          <p>
-            Naturally flavoured Mexican pineapple soda, sweetened with real sugar.
-          </p>
           <h5>&#36;5.49</h5>
           <form action="" method="POST">
             <div class="form-group w-25">
               <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
               <label for="quantity">Quantity</label>
             </div>
-            <button type="button" class="btn btn-outline-dark">More Description</button>
+            <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>
             <input type="submit" class="btn btn-primary" value="Add to Cart" />
-          </form> 
+            <div id="more-description" style="margin: 10px; display: none;">
+              <p>
+                Naturally flavoured Mexican pineapple soda, sweetened with real sugar.
+                <p style="color: gray; font-size: smaller;">Serial Number: 00000000</p>
+              </p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
