@@ -172,6 +172,7 @@
                             </label>
                             <div class="form-group w-25">
                                 <input
+                                    id="quantity5"
                                     class="form-control form-control-lg"
                                     type="number"
                                     name="quantity"
@@ -179,6 +180,20 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <script>
+                                    // input to track
+                                    let quantity5 = document.getElementById("quantity5"); 
+                                    if (sessionStorage.getItem("autosave5")) {
+                                      // Restore a content of the input
+                                      quantity5.value = sessionStorage.getItem("autosave5");
+                                    }
+                                   
+                                    // Listen for changes in the input field
+                                      quantity5.addEventListener("change", function() {
+                                      // save value into sessionStorage object 
+                                      sessionStorage.setItem("autosave5", quantity5.value);
+                                    });
+                                  </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
                             <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');" />

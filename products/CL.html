@@ -179,6 +179,7 @@
                             <label><input type="checkbox"> Defrost</label>
                             <div class="form-group w-25">
                                 <input
+                                    id="quantity4"
                                     class="form-control form-control-lg"
                                     type="number"
                                     name="quantity"
@@ -186,6 +187,20 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <script>
+                                    // input to track
+                                    let quantity4 = document.getElementById("quantity4"); 
+                                    if (sessionStorage.getItem("autosave4")) {
+                                      // Restore a content of the input
+                                      quantity4.value = sessionStorage.getItem("autosave4");
+                                    }
+                                   
+                                    // Listen for changes in the input field
+                                      quantity4.addEventListener("change", function() {
+                                      // save value into sessionStorage object 
+                                      sessionStorage.setItem("autosave4", quantity4.value);
+                                    });
+                                  </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
                             <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
