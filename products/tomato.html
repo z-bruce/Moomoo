@@ -101,19 +101,31 @@
                     <h3>Tomato</h3>
                     <h5>0.21 - 0.28kg</h5>
                     <h6>$3.24/1kg</h6>
-                    <p>
-                        When ripe, greenhouse tomatoes are firm and plump, with a red skin. Sliced and used as a topping
-                        on burgers and sandwiches like the classic BLT, they're delicious.
-                        To create baked filled tomatoes, scoop out the pulp and seeds.
-                    </p>
                     <h5>$0.91</h5>
                     <form action="" method="POST">
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input
+                                class="form-control form-control-lg"
+                                type="number"
+                                name="quantity"
+                                id="quantity"
+                                min="1"
+                                placeholder="1"
+                            />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                            <div id="more-description" style="display:none;" >
+                            <br>
+                            <p id="pear-description" style="text-align:justify;">
+                                When ripe, greenhouse tomatoes are firm and plump, with a red skin. Sliced and used as a topping
+                                on burgers and sandwiches like the classic BLT, they're delicious.
+                                To create baked filled tomatoes, scoop out the pulp and seeds.
+                             </p>
+
+                             <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                            </div>
+                        <input type="button" onclick="window.location.reload();" class="btn btn-primary" value="Add to Cart" />
                     </form>
                 </div>
             </div>
@@ -138,5 +150,10 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 </body>
+
+
+<!--Krishna's Javascript-->
+<script type="text/javascript" src="../js/produce-products.js">
+</script>
 
 </html>
