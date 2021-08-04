@@ -50,6 +50,7 @@
             color: #303841;
         }
     </style>
+     <script type="text/javaScript" src="../js/meat-product.js"></script>
     </head>
     <body>
         <!-- Navigation bar linking to home and menus -->
@@ -163,7 +164,6 @@
                         <h6 style="color: #303841">
                             Price Per Unit: $0.99 / 50 g
                         </h6>
-                        <p>Pastured Chicken legs</p>
                        
                         <h5>$2.99</h5> 
                         <form action="" method="POST">
@@ -187,8 +187,9 @@
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                            <button type="button" class="btn btn-outline-dark">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                            <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
+                            <p id="description" style="margin: 10px; font-style: italic; display: none;">Chicken legs of pastured American chickens<br> <span style="color:gray; font-size:smaller;"> serial number: 55489952</span>  </p>   
                         </form> 
                     </div>
                 </div>
