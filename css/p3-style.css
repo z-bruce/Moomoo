@@ -1,43 +1,47 @@
 .jumbotron {
-    background-image: url("https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
-    background-position-y: 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 75px;
+  background-image: url("https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-position-y: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 75px;
 }
 
 #breadAisle {
-    background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(0, 0, 0, 0.4) 100%
-        ),
-        url("https://images.unsplash.com/photo-1565182363525-f95648bbeee0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url("https://images.unsplash.com/photo-1565182363525-f95648bbeee0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
 }
 
 #productDescription {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 #productImage {
-    padding: 25px;
+  padding: 25px;
+}
+
+#more-description {
+  margin-top: 25px;
 }
 
 .img-fluid {
-    object-fit: cover;
-    width: 500px;
-    height: 500px;
-    float: right;
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  float: right;
 }
 
 .footer {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 @media (max-width: 770px) {
-    .img-fluid {
-        float: none;
-    }
+  .img-fluid {
+    float: none;
+  }
 }
 
 /*# sourceMappingURL=p3-style.css.map */
