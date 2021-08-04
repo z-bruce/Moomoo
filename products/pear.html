@@ -101,18 +101,30 @@
                     <h3>Pear</h3>
                     <h5>0.17 - 0.20kg</h5>
                     <h6>$4.34/1kg</h6>
-                    <p>
-                        Pears will give every fruit dish a distinct flavour. They deliver delicious sweetness.
-                        Salad dressings, preserves, and chutneys can be made using them.
-                    </p>
                     <h5>$0.87</h5>
                     <form action="" method="POST">
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input
+                                class="form-control form-control-lg"
+                                type="number"
+                                name="quantity"
+                                id="quantity"
+                                min="1"
+                                placeholder="1"
+                            />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                            <div id="more-description" style="display:none;" >
+                            <br>
+                            <p id="pear-description" style="text-align:justify;">
+                                Pears will give every fruit dish a distinct flavour. They deliver delicious sweetness.
+                                Salad dressings, preserves, and chutneys can be made using them.
+                             </p>
+
+                             <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                            </div>
+                        <input type="button" onclick="window.location.reload();" class="btn btn-primary" value="Add to Cart" />
                     </form>
                 </div>
             </div>
@@ -137,5 +149,9 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 </body>
+
+<!--Krishna's Javascript-->
+<script type="text/javascript" src="../js/produce-products.js">
+</script>
 
 </html>

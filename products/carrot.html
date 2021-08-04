@@ -152,10 +152,6 @@
                         <h3>Carrots</h3>
                         <h5>Sold in bags</h5>
                         <h6>1.36kg per bag</h6>
-                        <p>
-                            Carrots are a terrific snack as well as a great addition to any meal.
-                            salads or as a side dish Vitamin C and beta-carotene are abundant.
-                        </p>
                         <h5>$1.97</h5>
                         <form action="" method="POST">
                             <div class="form-group w-25">
@@ -163,14 +159,24 @@
                                     class="form-control form-control-lg"
                                     type="number"
                                     name="quantity"
+                                    id="quantity"
                                     min="1"
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                            <button type="button" class="btn btn-outline-dark">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
-                        </form> 
+                            <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                                <div id="more-description" style="display:none;" >
+                                <br>
+                                <p id="carrot-description" style="text-align:justify;">
+                                    Carrots are a terrific snack as well as a great addition to any meal.
+                                    salads or as a side dish Vitamin C and beta-carotene are abundant.
+                                 </p>
+    
+                                 <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                                </div>
+                            <input type="button" onclick="window.location.reload();" class="btn btn-primary" value="Add to Cart" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -218,4 +224,9 @@
             crossorigin="anonymous"
         ></script>
     </body>
+
+    <!--Krishna's Javascript-->
+    <script type="text/javascript" src="../js/produce-products.js">
+    </script>
+
 </html>

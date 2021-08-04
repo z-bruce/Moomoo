@@ -101,22 +101,33 @@
                     <h3>Radish</h3>
                     <h5>Sold in bunches</h5>
                     <h6>$0.79/each</h6>
-                    <p>
-                        Radishes come in a variety of sizes and colours, ranging from spherical to carrot-shaped with
-                        white skin. Depending on the cultivar, they are crisp and have a moderate or peppery flavour.
-                        Salads and sandwiches can be made with raw radishes,
-                        or as a simple side dish, roast whole with butter.
-                    </p>
                     <h5>$0.79</h5>
                     <form action="" method="POST">
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input
+                                class="form-control form-control-lg"
+                                type="number"
+                                name="quantity"
+                                id="quantity"
+                                min="1"
+                                placeholder="1"
+                            />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
-                    </form>
+                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                            <div id="more-description" style="display:none;" >
+                            <br>
+                            <p id="radish-description" style="text-align:justify;">
+                                Radishes come in a variety of sizes and colours, ranging from spherical to carrot-shaped with
+                        white skin. Depending on the cultivar, they are crisp and have a moderate or peppery flavour.
+                        Salads and sandwiches can be made with raw radishes,
+                        or as a simple side dish, roast whole with butter.
+                             </p>
 
+                             <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                            </div>
+                        <input type="button" onclick="window.location.reload();" class="btn btn-primary" value="Add to Cart" />
+                    </form>
                 </div>
             </div>
         </div>
@@ -140,5 +151,10 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 </body>
+
+<!--Krishna's Javascript-->
+<script type="text/javascript" src="../js/produce-products.js">
+</script>
+
 
 </html>
