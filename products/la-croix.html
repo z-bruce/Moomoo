@@ -100,10 +100,10 @@
           <h3 id="productName">La Croix Grapefruit Sparkling Water</h3>
           <h5>12 x 355 mL</h5>
           <h6>&#36;0.235 / 100 mL</h6>
-          <h5>&#36;9.99 /ea</h5>
+          <h5>&#36;<span id="unit-price">9.99</span> /ea</h5>
           <form action="" method="POST">
             <div class="form-group w-25">
-              <input id="quantity" class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" value="1"/>
+              <input id="quantity" class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" value="1" onchange="calculateSubtotal()"/>
               <label for="quantity">Quantity</label>
             </div>
             <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>
