@@ -192,17 +192,21 @@
                                 <script>
                                     // input to track
                                     let quantity3 = document.getElementById("quantity3"); 
+                                    var subtotal = document.getElementById('subtotal');
                                     if (sessionStorage.getItem("autosave3")) {
                                       // Restore a content of the input
                                       quantity3.value = sessionStorage.getItem("autosave3");
                                     }
-                                   
+                                    if (sessionStorage.getItem("subtotal3")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal3");
+                                    }
                                     // Listen for changes in the input field
                                       quantity3.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave3", quantity3.value);
-                                      var subtotal = document.getElementById('subtotal')
                                       subtotal.innerHTML= '$'+parseFloat(quantity3.value*8.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal3", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>

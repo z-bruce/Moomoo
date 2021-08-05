@@ -180,17 +180,21 @@
                                 <script>
                                     // input to track
                                     let quantity6 = document.getElementById("quantity6"); 
+                                     var subtotal = document.getElementById('subtotal');
                                     if (sessionStorage.getItem("autosave6")) {
                                       // Restore a content of the input
                                       quantity6.value = sessionStorage.getItem("autosave6");
                                     }
-                                   
+                                    if (sessionStorage.getItem("subtotal6")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal6");
+                                    }
                                     // Listen for changes in the input field
                                       quantity6.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave6", quantity6.value);
-                                      var subtotal = document.getElementById('subtotal')
                                       subtotal.innerHTML= '$'+parseFloat(quantity6.value*8.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal6", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>
