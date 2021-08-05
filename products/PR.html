@@ -157,7 +157,7 @@
                             Price Per Unit: $2.8 / 100 g
                         </h6>
                        
-                        <h5>$13.99</h5> 
+                        <h5>$13.99/ea</h5> 
                         
                         <form action="" method="POST">
                             <label>Flavour: <select>
@@ -177,6 +177,7 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity2 = document.getElementById("quantity2"); 
@@ -189,11 +190,13 @@
                                       quantity2.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave2", quantity2.value);
+                                      var subtotal = document.getElementById('subtotal')
+                                      subtotal.innerHTML= '$'+parseFloat(quantity2.value*13.99).toFixed(2);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity2').value+' Pork Ribs has been added to the cart!!');"/>
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Pork ribs of pastured American pigs<br> <span style="color:gray; font-size:smaller;"> serial number: 40167785</span>  </p>
                         </form>
   

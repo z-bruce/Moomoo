@@ -165,7 +165,7 @@
                             Price Per Unit: $2.99 / 100 g
                         </h6>
                        
-                        <h5>$8.99</h5> 
+                        <h5>$8.99/ea</h5> 
                         
                         <form action="" method="POST">
                             <label>Flavour: <select>
@@ -188,6 +188,7 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity3 = document.getElementById("quantity3"); 
@@ -200,11 +201,13 @@
                                       quantity3.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave3", quantity3.value);
+                                      var subtotal = document.getElementById('subtotal')
+                                      subtotal.innerHTML= '$'+parseFloat(quantity3.value*8.99).toFixed(2);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity3').value+' Chicken Breasts has been added to the cart!!');"/>
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Chicken Breasts of pastured American chickens<br> <span style="color:gray; font-size:smaller;"> serial number: 88954458</span>  </p>   
                         </form> 
                     </div>
