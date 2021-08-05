@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body onload="loadQty()" onbeforeunload="saveQty()">
   <!-- Navigation bar linking to home and menus -->
   <header class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -97,13 +97,13 @@
 
         <!-- Product description, pricing, quantity, add to cart button. -->
         <div class="col-md-6" id="productDescription">
-          <h3>Perrier Sparkling Mineral Water</h3>
+          <h3 id="productName">Perrier Sparkling Mineral Water</h3>
           <h5>750 mL</h5>
           <h6>&#36;0.265 / 100 mL</h6>
-          <h5>&#36;1.99</h5>
+          <h5>&#36;1.99 /ea</h5>
           <form action="" method="POST">
             <div class="form-group w-25">
-              <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+              <input id="quantity" class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" value="1"/>
               <label for="quantity">Quantity</label>
             </div>
             <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>

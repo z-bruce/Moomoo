@@ -12,8 +12,7 @@
   <link rel="icon" href="../images/icon-moo.png" />
 
   <!--Link Bootstrap 4 styling to document-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
   <!-- Link Google's Material Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -27,7 +26,7 @@
 
 </head>
 
-<body>
+<body onload="loadQty()" onbeforeunload="saveQty()">
   <!-- Navigation bar linking to home and menus -->
   <header class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -101,17 +100,17 @@
 
         <!-- Product description, pricing, quantity, add to cart button. -->
         <div class="col-md-6" id="productDescription">
-          <h3>Coca-Cola Classic</h3>
+          <h3 id="productName">Coca-Cola Classic</h3>
           <h5>4 x 330 mL</h5>
           <h6>&#36;0.226 / 100 mL</h6>
-          <h5>&#36;2.99</h5>
+          <h5>&#36;2.99 /ea</h5>
           <form action="" method="POST">
             <div class="form-group w-25">
-              <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+              <input id="quantity" class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" value="1"/>
               <label for="quantity">Quantity</label>
             </div>
             <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>
-            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="addedToCartAlert('Coca-Cola')"/>
+            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="addedToCartAlert()"/>
             <div id="more-description" style="margin: 10px; display: none;">
               <p>
                 The classic Coca-Cola, made with no artificial flavours or preservatives.
