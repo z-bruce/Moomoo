@@ -165,7 +165,7 @@
                             Price Per Unit: $2.99 / 100 g
                         </h6>
                        
-                        <h5>$8.99</h5> 
+                        <h5>$8.99/ea</h5> 
                         
                         <form action="" method="POST">
                             <label>Flavour: <select>
@@ -188,23 +188,30 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity3 = document.getElementById("quantity3"); 
+                                    var subtotal = document.getElementById('subtotal');
                                     if (sessionStorage.getItem("autosave3")) {
                                       // Restore a content of the input
                                       quantity3.value = sessionStorage.getItem("autosave3");
                                     }
-                                   
+                                    if (sessionStorage.getItem("subtotal3")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal3");
+                                    }
                                     // Listen for changes in the input field
                                       quantity3.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave3", quantity3.value);
+                                      subtotal.innerHTML= '$'+parseFloat(quantity3.value*8.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal3", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity3').value+' Chicken Breasts has been added to the cart!!');"/>
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Chicken Breasts of pastured American chickens<br> <span style="color:gray; font-size:smaller;"> serial number: 88954458</span>  </p>   
                         </form> 
                     </div>

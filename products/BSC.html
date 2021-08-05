@@ -158,7 +158,7 @@
                         </h6>
                         
                        
-                        <h5>$14.99</h5> 
+                        <h5>$14.99/ea</h5> 
 
                         <form action="" method="POST">
                             <label>Part: <select>
@@ -177,23 +177,31 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity = document.getElementById("quantity1"); 
+                                    var subtotal = document.getElementById('subtotal')
                                     if (sessionStorage.getItem("autosave1")) {
                                       // Restore a content of the input
                                       quantity.value = sessionStorage.getItem("autosave1");
+                                    }
+                                    if (sessionStorage.getItem("subtotal1")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal1");
                                     }
                                    
                                     // Listen for changes in the input field
                                       quantity.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave1", quantity.value);
+                                      subtotal.innerHTML= '$'+parseFloat(quantity.value*14.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal1", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');" /> 
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert( document.getElementById('quantity1').value+' Beef cut has been added to the cart!!');" /> 
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Beef Steak cut of pastured American cow<br> <span style="color:gray; font-size:smaller;"> serial number: 40168822</span>  </p>   
                         </form> 
                     </div>

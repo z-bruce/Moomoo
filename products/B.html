@@ -157,7 +157,7 @@
                             Price Per Unit: $2.99 / 100 g
                         </h6>
                        
-                        <h5>$8.99</h5> 
+                        <h5>$8.99/ea</h5> 
                         <form action="" method="POST">
                             <label>Flavour: <select>
                                 <option>Original</option>
@@ -176,23 +176,30 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity6 = document.getElementById("quantity6"); 
+                                     var subtotal = document.getElementById('subtotal');
                                     if (sessionStorage.getItem("autosave6")) {
                                       // Restore a content of the input
                                       quantity6.value = sessionStorage.getItem("autosave6");
                                     }
-                                   
+                                    if (sessionStorage.getItem("subtotal6")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal6");
+                                    }
                                     // Listen for changes in the input field
                                       quantity6.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave6", quantity6.value);
+                                      subtotal.innerHTML= '$'+parseFloat(quantity6.value*8.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal6", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');" />
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity6').value+' Bacons has been added to the cart!!');" />
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Bacons made with pastured American pigs<br> <span style="color:gray; font-size:smaller;"> serial number: 42231512</span>  </p>   
                         </form>
                     </div>

@@ -165,7 +165,7 @@
                             Price Per Unit: $0.99 / 50 g
                         </h6>
                        
-                        <h5>$2.99</h5> 
+                        <h5>$2.99/ea</h5> 
                         <form action="" method="POST">
                             <label>Flavour: <select>
                                 <option>Original</option>
@@ -187,23 +187,30 @@
                                     placeholder="1"
                                 />
                                 <label for="quantity">Quantity</label>
+                                <h4>Subtotal:<span id="subtotal"></span></h4>
                                 <script>
                                     // input to track
                                     let quantity4 = document.getElementById("quantity4"); 
+                                    var subtotal = document.getElementById('subtotal');
                                     if (sessionStorage.getItem("autosave4")) {
                                       // Restore a content of the input
                                       quantity4.value = sessionStorage.getItem("autosave4");
                                     }
-                                   
+                                    if (sessionStorage.getItem("subtotal4")) {
+                                      // Restore a content of the input
+                                       subtotal.innerHTML= sessionStorage.getItem("subtotal4");
+                                    }
                                     // Listen for changes in the input field
                                       quantity4.addEventListener("change", function() {
                                       // save value into sessionStorage object 
                                       sessionStorage.setItem("autosave4", quantity4.value);
+                                      subtotal.innerHTML= '$'+parseFloat(quantity4.value*2.99).toFixed(2);
+                                      sessionStorage.setItem("subtotal4", subtotal.innerHTML);
                                     });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert('This item has been added to the cart!!');"/>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity4').value+' Chicken legs has been added to the cart!!');"/>
                             <p id="description" style="margin: 10px; font-style: italic; display: none;">Chicken legs of pastured American chickens<br> <span style="color:gray; font-size:smaller;"> serial number: 55489952</span>  </p>   
                         </form> 
                     </div>
