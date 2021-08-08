@@ -35,7 +35,8 @@
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" onload="initSession('lewis-road-creamery-ice-cream')"
+onbeforeunload="storeSession('lewis-road-creamery-ice-cream')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -75,7 +76,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="lewis-road-creamery-ice-cream">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
                 <h1 class="display-5 text-white">Milk Products</h1>
@@ -97,31 +98,58 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Lewis Road Creamery Ice Cream</h3>
-                    <h5>500 ml</h5>
+                    <h5 id="unit-choice">500 ml</h5>
                     <h6>Price Per Unit: &#36;1.36 / 100 ml</h6>
-                    <p>
-                        Omega-3 free range eggs. The hens that produce these eggs are fed organic feed in a Quebec free
-                        farm.
-                    </p>
-                    <h5>&#36;6.79</h5>
+                    <h5 id="each-price">&#36;6.79 /ea</h5>
                     <form action="" method="POST">
-                        <select class="custom-select custom-select-lg mb-3 product-size">
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="flavour">
                             <option selected>Flavour - Strawberry</option>
                             <option value="1">Flavour - Chocolate</option>
                             <option value="2">Flavour - Blueberry</option>
-                        </select>
-                        <select class="custom-select custom-select-lg mb-3 product-size">
-                            <option selected>Size - 500 ml</option>
-                            <option value="1">Size - 1 L</option>
-                            <option value="2">Size - 2 L</option>
+                        </select>                 
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="size"
+                            onchange="updateUnit(this)">
+                            <option value="500 ml|6.79" selected>Size - 500 ml</option>
+                            <option value="1 L|13.60">Size - 1 L</option>
                         </select>
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
+                                id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        <h4 id="product-subtotal">Subtotal: &#36;6.79</h4>
+                        <button type="button" class="btn btn-outline-dark" id="desc-btn"
+                            onclick="toggleDescription()">More Description</button>
+                        <button type="button" class="btn btn-primary"
+                            data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+                        <!-- Pop up for add to cart -->
+                        <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ProductLabel">Lewis Road Creamery Ice Cream</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Add <span id="popup-quantity">1</span> x Lewis Road Creamery Ice Cream to cart</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                    <div id="more-description" style="display:none">
+                        <p>
+                            These frozen desserts are sweet and freshing on these hot summer days.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Serial #: 09876511</small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,6 +172,9 @@
             </small>
         </p>
     </footer>
+
+    <!--Dairy Products JavaScript -->
+    <script type="text/javaScript" src="../js/dairy-products.js"></script>
 
     <!-- Optional JavaScript functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
