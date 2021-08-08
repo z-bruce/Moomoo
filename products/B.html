@@ -159,7 +159,7 @@
                        
                         <h5>$8.99/ea</h5> 
                         <form action="" method="POST">
-                            <label>Flavour: <select>
+                            <label>Flavour: <select id="flavor">
                                 <option>Original</option>
                                 <option>Barbeque</option>
                                 <option>Spicy</option>
@@ -174,13 +174,16 @@
                                     name="quantity"
                                     min="1"
                                     placeholder="1"
+                                    value="1"
                                 />
                                 <label for="quantity">Quantity</label>
-                                <h4>Subtotal:<span id="subtotal"></span></h4>
+                                <h4>Subtotal:<span id="subtotal">$8.99</span></h4>
                                 <script>
                                     // input to track
                                     let quantity6 = document.getElementById("quantity6"); 
                                      var subtotal = document.getElementById('subtotal');
+                                     var flavor = document.getElementById('flavor');
+
                                     if (sessionStorage.getItem("autosave6")) {
                                       // Restore a content of the input
                                       quantity6.value = sessionStorage.getItem("autosave6");
@@ -189,6 +192,10 @@
                                       // Restore a content of the input
                                        subtotal.innerHTML= sessionStorage.getItem("subtotal6");
                                     }
+                                    if (sessionStorage.getItem("Bflavor")) {
+                                      // Restore a content of the input
+                                       flavor.value= sessionStorage.getItem("Bflavor");
+                                    }
                                     // Listen for changes in the input field
                                       quantity6.addEventListener("change", function() {
                                       // save value into sessionStorage object 
@@ -196,6 +203,9 @@
                                       subtotal.innerHTML= '$'+parseFloat(quantity6.value*8.99).toFixed(2);
                                       sessionStorage.setItem("subtotal6", subtotal.innerHTML);
                                     });
+                                    flavor.addEventListener("change", function(){
+                                        sessionStorage.setItem("Bflavor", flavor.value);
+                                      });
                                   </script>
                             </div>
                             <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
