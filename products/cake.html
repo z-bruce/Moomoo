@@ -35,7 +35,7 @@
     <script type="text/javaScript" src="../js/bakery-products.js"></script>
   </head>
 
-  <body>
+  <body onload="loadQty()" onbeforeunload="saveQty()">
     <!-- Navigation bar linking to home and menus -->
     <header class="container-fluid">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -145,7 +145,7 @@
             <h5>1.25 kg</h5>
             <h6 style="color: #303841">Price Per Unit: $2 / 100 g</h6>
 
-            <h5>$24.99</h5>
+            <h5>$<span id="unit-price">24.99</span></h5>
             <form action="" method="POST">
               <div class="form-group w-25">
                 <input
@@ -155,9 +155,11 @@
                   min="1"
                   id="quantity"
                   value="1"
+                  onchange="subtotal()"
                 />
                 <label for="quantity">Quantity</label>
               </div>
+              <h4>Subtotal: $<span id="subtotal">24.99</span></h4>
               <button
                 type="button"
                 class="btn btn-outline-dark"
