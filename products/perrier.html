@@ -108,14 +108,35 @@
             </div>
             <h4>Subtotal: &#36;<span id="subtotal"></span></h4>
             <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>
-            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="addedToCartAlert('Perrier')"/>
-            <div id="more-description" style="margin: 10px; display: none;">
-              <p>
-                Sparking mineral water from France, 0 calories and 0 sugar added.
-                <p style="color: gray; font-size: smaller;">Serial Number: 501251393262</p>
-              </p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+            <!-- Pop up for add to cart -->
+            <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ProductLabel">Perrier</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Add <span id="popup-quantity">1</span> x Perrier to cart</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                        </div>
+                    </div>
+                </div>
             </div>
           </form>
+          <div id="more-description" style="margin: 10px; display: none;">
+            <p>
+              Sparking mineral water from France, 0 calories and 0 sugar added.
+              <p style="color: gray; font-size: smaller;">Serial Number: 501251393262</p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
