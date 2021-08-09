@@ -9,7 +9,7 @@ var flavour = document.getElementById("flavour");
 var size = document.getElementById("size");
 var quantity = document.getElementById("quantity");
 var popupQ = document.getElementById("popup-quantity");
-let product = document.getElementById("more-description").style;
+var product = document.getElementById("more-description").style;
 
 // toggle an extra product description for the dairy pages
 function toggleDescription() {

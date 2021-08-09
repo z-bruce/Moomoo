@@ -15,22 +15,14 @@ function revealDescription() {
    */
 }
 
-function cartAlert() {
-  var quantity = document.getElementById("quantity").value;
-  var name = document.getElementById("productName").innerHTML;
-  alert("Added " + quantity + "x " + name + " to cart.");
-
-  // Temporarily lets user know that a product has been added to the cart.
-  // Uses document value of quantity and innerHTML for product name.
-}
-
 function subtotal() {
   var quantity = document.getElementById("quantity").value;
   var subtotal = document.getElementById("subtotal");
+  var popupQuantity = document.getElementById("popup-quantity");
   var price = parseFloat(document.getElementById("unit-price").innerHTML);
 
   subtotal.innerHTML = (quantity * price).toFixed(2);
-
+  popupQuantity.innerHTML = quantity;
   // Calculates subtotal based on quantity and price per unit
 }
 
