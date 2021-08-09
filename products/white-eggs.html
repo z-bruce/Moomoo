@@ -99,9 +99,9 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Nutri Omega-3 White</h3>
-                    <h5 id="unit-choice">12 EA</h5>
+                    <h5 id="unit-choice"></h5>
                     <h6>Price Per Unit: &#36;0.40 / ea</h6>
-                    <h5 id="each-price">&#36;4.79</h5>
+                    <h5>&#36;<span id="each-price"></span></h5>
                     <form action="" method="POST">
                         <!-- Size control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="size"
@@ -111,11 +111,11 @@
                         </select>
                         <!-- Quantity control -->
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <h4 id="product-subtotal">Subtotal: &#36;4.79</h4>
+                        <h4>Subtotal: &#36;<span id="product-subtotal"></span></h4>
                         <!-- Call to action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>

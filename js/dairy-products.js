@@ -23,8 +23,8 @@ function updateUnit(elem) {
     let choicePrice = choice[1];
 
     unitChoice.innerHTML = choice[0];
-    eachPrice.innerHTML = "&#36;" + choicePrice + " /ea";
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (quantity.value * choicePrice ).toFixed(2);
+    eachPrice.innerHTML = choicePrice;
+    productSubtotal.innerHTML = (quantity.value * choicePrice ).toFixed(2);
 }
 
 // update subtotal price and popup quantity when quantity changes
@@ -32,7 +32,7 @@ function updateQuantity(elem) {
     let quantity = elem.value;
     let price = eachPrice.innerHTML.match(/\d+\.\d{2}/);
 
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (quantity * price).toFixed(2);
+    productSubtotal.innerHTML = (quantity * price).toFixed(2);
     popupQ.innerHTML = quantity;
 }
 
@@ -72,5 +72,12 @@ function initSession(productName) {
         if (storedProduct.unitSelectedIndex >= 0) {
             size.options.selectedIndex = storedProduct.unitSelectedIndex;
         }
+    } else {
+        let option = size.options[size.selectedIndex].value.split("|");
+        unitChoice.innerHTML = option[0];
+        eachPrice.innerHTML = option[1];
+        productSubtotal.innerHTML = option[1];
+        quantity.value = 1;
+        popupQ.innerHTML = 1;
     }
 }

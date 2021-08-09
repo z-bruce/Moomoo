@@ -99,9 +99,9 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Lewis Road Creamery Ice Cream</h3>
-                    <h5 id="unit-choice">500 ml</h5>
+                    <h5 id="unit-choice"></h5>
                     <h6>Price Per Unit: &#36;1.36 / 100 ml</h6>
-                    <h5 id="each-price">&#36;6.79 /ea</h5>
+                    <h5>&#36;<span id="each-price"></span> /ea</h5>
                     <form action="" method="POST">
                         <!-- Flavour control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="flavour">
@@ -117,11 +117,11 @@
                         </select>
                         <!-- Quantity control -->
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <h4 id="product-subtotal">Subtotal: &#36;6.79</h4>
+                        <h4>Subtotal: &#36;<span id="product-subtotal"></span></h4>
                         <!-- Call to Action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>
