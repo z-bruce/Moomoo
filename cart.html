@@ -40,16 +40,9 @@
         <h4>Price: $<span class="price">0.87</span></h4>
         <p class="quantity">
             Quantity:
-            <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal(0.87,this.value)"; />
+            <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal(0.87,this.value, 'subtotal1')"; />
           </p>
-          <h5>Sub-Total: $ <span class="subtotal" id="subtotal">0.87</span></h5>
-      
-          <script>
-              function productSubtotal(price, quantity){
-                  var productSub= (price*quantity).toFixed(2); 
-                  document.getElementById("subtotal").innerHTML = productSub;
-              }
-          </script>
+          <h5>Subtotal: $ <span class="subtotal" id="subtotal1">0.87</span></h5>
         <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
           Remove
         </button>
@@ -62,16 +55,9 @@
       <h4>Price: $<span class="price">0.79</span></h4>
       <p class="quantity">
         Quantity:
-        <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal2(0.79,this.value)"; />
+        <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal(0.79,this.value, 'subtotal2')"; />
       </p>
-      <h5>Sub-Total: $ <span class="subtotal" id="subtotal2">0.79</span></h5>
-  
-      <script>
-          function productSubtotal2(price, quantity){
-              var productSub= (price*quantity).toFixed(2); 
-              document.getElementById("subtotal2").innerHTML = productSub;
-          }
-      </script>
+      <h5>Subtotal: $ <span class="subtotal" id="subtotal2">0.79</span></h5>
       <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
         Remove
       </button>
@@ -84,17 +70,9 @@
     <h4>Price: $<span class="price">0.79</span></h4>
     <p class="quantity">
       Quantity:
-      <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal3(0.79,this.value)"; />
+      <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal(0.79,this.value, 'subtotal3')"; />
     </p>
-    <h5>Sub-Total: $ <span class="subtotal" id="subtotal3">0.79</span></h5>
-
-    <script>
-        function productSubtotal3(price, quantity){
-            var productSub= (price*quantity).toFixed(2); 
-            document.getElementById("subtotal3").innerHTML = productSub;
-        }
-    </script>
-
+    <h5>Subtotal: $ <span class="subtotal" id="subtotal3">0.79</span></h5>
     <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
       Remove
     </button>

@@ -10,6 +10,11 @@ var qst;
 var gst;
 var total;
 
+// determine individual product total
+function productSubtotal(price, quantity, unitSubtotal){
+    var productSub= (price*quantity).toFixed(2); 
+    document.getElementById(unitSubtotal).innerHTML = productSub;
+}
 
 //--- Number of items
 // count the number of items by the total quantity of items. Display.
