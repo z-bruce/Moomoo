@@ -24,7 +24,7 @@ function updateUnit(elem) {
 
     unitChoice.innerHTML = choice[0];
     eachPrice.innerHTML = "&#36;" + choicePrice + " /ea";
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity.value * choicePrice + "e+2") + "e-2")).toFixed(2);
+    productSubtotal.innerHTML = "Subtotal: &#36;" + (quantity.value * choicePrice ).toFixed(2);
 }
 
 // update subtotal price and popup quantity when quantity changes
@@ -32,7 +32,7 @@ function updateQuantity(elem) {
     let quantity = elem.value;
     let price = eachPrice.innerHTML.match(/\d+\.\d{2}/);
 
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity * price + "e+2") + "e-2")).toFixed(2);
+    productSubtotal.innerHTML = "Subtotal: &#36;" + (quantity * price).toFixed(2);
     popupQ.innerHTML = quantity;
 }
 
