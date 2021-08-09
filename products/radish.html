@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/p3-style.css" />
 </head>
 
-<body>
+<body  onload="loadQty()" onbeforeunload="saveQty()">
     <!-- Navigation bar linking to home and menus -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -98,10 +98,10 @@
 
                 <!-- Product description, pricing, quantity, add to cart button. -->
                 <div class="col-md-6" id="productDescription">
-                    <h3>Radish</h3>
+                    <h3 id="product-name">Radish</h3>
                     <h5>Sold in bunches</h5>
                     <h6>$0.79/each</h6>
-                    <h5>$0.79</h5>
+                    <h5>$<span id="price">0.79</span> / ea</h5>
                     <form action="" method="POST">
                         <div class="form-group w-25">
                             <input
@@ -111,22 +111,51 @@
                                 id="quantity"
                                 min="1"
                                 placeholder="1"
+                                value=1;
+                                onchange="subtot()"
                             />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
-                            <div id="more-description" style="display:none;" >
-                            <br>
-                            <p id="radish-description" style="text-align:justify;">
-                                Radishes come in a variety of sizes and colours, ranging from spherical to carrot-shaped with
-                        white skin. Depending on the cultivar, they are crisp and have a moderate or peppery flavour.
-                        Salads and sandwiches can be made with raw radishes,
-                        or as a simple side dish, roast whole with butter.
-                             </p>
 
-                             <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
-                            </div>
-                        <input type="button" onclick="window.location.reload();" class="btn btn-primary" value="Add to Cart" />
+                        <h4>Sub-total: $<span id="subtotal">0.79</span></h4>
+
+                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                            
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add to Cart </button>
+                        <!-- Pop up for add to cart -->
+                           <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                           aria-hidden="true">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h5 class="modal-title" id="ProductLabel">Radish</h5>
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                           <span aria-hidden="true">&times;</span>
+                                       </button>
+                                   </div>
+                                   <div class="modal-body">
+                                       <p>Add <span id="popup-quantity">1</span> x Radish to cart</p>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                       <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                   </div>
+                               </div>
+                           </div>
+                           </div>
+
+                         <div id="more-description" style="display:none;" >
+                                        
+                                        <p id="radish-description" style="text-align:justify;">
+                                            Radishes come in a variety of sizes and colours, ranging from spherical to carrot-shaped with
+                                    white skin. Depending on the cultivar, they are crisp and have a moderate or peppery flavour.
+                                    Salads and sandwiches can be made with raw radishes,
+                                    or as a simple side dish, roast whole with butter.
+                                        </p>
+
+                                        <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                                </div>
+
                     </form>
                 </div>
             </div>

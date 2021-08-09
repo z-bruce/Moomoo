@@ -27,7 +27,7 @@
   <link rel="stylesheet" type="text/css" href="css/p4-style.css" />
 </head>
 
-<body onload="updateSummary()">
+<body onload="updateSummary(), loadQty()";  onbeforeunload="saveQty()">
   <header>
     <a class="navbar-brand" href="index.html"><img src="images/moomoologo.png" alt="MooMoo Grocery Logo" /></a>
   </header>
@@ -37,11 +37,19 @@
       <div class="product">
         <img class="product-picture" src=images/pear.jpg> <div class="product-description">
         <h3 class="name"><a href="products/pear.html">Pear</a></h3>
-        <h4>Price: $<span class="price">0.90</span></h4>
+        <h4>Price: $<span class="price">0.87</span></h4>
         <p class="quantity">
-          Quantity:
-          <input class="quantity q-in" type="number" min="1" value="1" />
-        </p>
+            Quantity:
+            <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal(0.87,this.value)"; />
+          </p>
+          <h5>Sub-Total: $ <span class="subtotal" id="subtotal">0.87</span></h5>
+      
+          <script>
+              function productSubtotal(price, quantity){
+                  var productSub= (price*quantity).toFixed(2); 
+                  document.getElementById("subtotal").innerHTML = productSub;
+              }
+          </script>
         <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
           Remove
         </button>
@@ -51,11 +59,19 @@
     <div class="product">
       <img class="product-picture" src=images/apple.jpg> <div class="product-description">
       <h3 class="name"><a href="products/apples.html">Apple</a></h3>
-      <h4>Price: $<span class="price">0.90</span></h4>
+      <h4>Price: $<span class="price">0.79</span></h4>
       <p class="quantity">
         Quantity:
-        <input class="quantity q-in" type="number" min="1" value="1" />
+        <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal2(0.79,this.value)"; />
       </p>
+      <h5>Sub-Total: $ <span class="subtotal" id="subtotal2">0.79</span></h5>
+  
+      <script>
+          function productSubtotal2(price, quantity){
+              var productSub= (price*quantity).toFixed(2); 
+              document.getElementById("subtotal2").innerHTML = productSub;
+          }
+      </script>
       <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
         Remove
       </button>
@@ -65,17 +81,26 @@
   <div class="product">
     <img class="product-picture" src=images/radish.jpg> <div class="product-description">
     <h3 class="name"><a href="products/radish.html">Radish</a></h3>
-    <h4>Price: $<span class="price">0.90</span></h4>
+    <h4>Price: $<span class="price">0.79</span></h4>
     <p class="quantity">
       Quantity:
-      <input class="quantity q-in" type="number" min="1" value="1" />
+      <input class="quantity q-in" type="number" min="1" value="1" onchange="productSubtotal3(0.79,this.value)"; />
     </p>
+    <h5>Sub-Total: $ <span class="subtotal" id="subtotal3">0.79</span></h5>
+
+    <script>
+        function productSubtotal3(price, quantity){
+            var productSub= (price*quantity).toFixed(2); 
+            document.getElementById("subtotal3").innerHTML = productSub;
+        }
+    </script>
+
     <button class="remove" type="button" data-toggle="modal" data-target="#removeModal">
       Remove
     </button>
   </div>
   </div>
-  <div class="end"></div>
+  
   </div>
 
   <div class="order-summary">
@@ -135,3 +160,4 @@
 </body>
 
 </html>
+
