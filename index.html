@@ -69,7 +69,7 @@
     <div id="main-display" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item carousel-item-1 active">
-          <h1>Not a member yet?</h1>
+          <h1>Not a member?</h1>
           <a href="SignUp.html" type="button" class="btn btn-red">Register today</a>
         </div>
         <div class="carousel-item carousel-item-2">
@@ -193,6 +193,15 @@
           href="https://unsplash.com/s/photos/people-groceries?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></small>
     </p>
   </footer>
+  <!-- ensure that fixed top doesn't overlap content-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // add padding top to show content behind header
+      header_height = document.querySelector('.fixed-top').offsetHeight;
+      document.body.style.paddingTop = header_height + 'px';
+    });
+  </script>
+
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
