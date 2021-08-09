@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100" onload="initSession('itmbe-natural-milk')"
-onbeforeunload="storeSession('itmbe-natural-milk')">
+    onbeforeunload="storeSession('itmbe-natural-milk')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -76,6 +76,7 @@ onbeforeunload="storeSession('itmbe-natural-milk')">
             </div>
         </nav>
     </header>
+    <!-- Product section -->
     <main id="itmbe-natural-milk">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
@@ -101,23 +102,26 @@ onbeforeunload="storeSession('itmbe-natural-milk')">
                     <h5 id="unit-choice">1 L</h5>
                     <h6>Price Per Unit: &#36;0.42 / 100 ml</h6>
                     <h5 id="each-price">&#36;4.19 /ea</h5>
-                    <form action="" method="POST"> 
+                    <form action="" method="POST">
+                        <!-- Size control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="size"
                             onchange="updateUnit(this)">
                             <option value="500 ml|2.10">Size - 500 ml</option>
                             <option value="1 L|4.19" selected>Size - 1 L</option>
                             <option value="2 L|8.39">Size - 2 L</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
                             <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
                         <h4 id="product-subtotal">Subtotal: &#36;4.19</h4>
+                        <!-- Call to action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>
-                        <button type="button" class="btn btn-primary"
-                            data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
                         <!-- Pop up for add to cart -->
                         <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
                             aria-hidden="true">
@@ -133,13 +137,16 @@ onbeforeunload="storeSession('itmbe-natural-milk')">
                                         <p>Add <span id="popup-quantity">1</span> x Itmbe Natural Milk to cart</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    <!-- More description/initially hidden -->
                     <div id="more-description" style="display:none">
                         <p>
                             Natural unprocessed milk, Itambe Natural milk is full of nutrients.

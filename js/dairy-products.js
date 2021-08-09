@@ -10,10 +10,10 @@ var size = document.getElementById("size");
 var quantity = document.getElementById("quantity");
 var popupQ = document.getElementById("popup-quantity");
 
-// function to toggle an extra product description for the dairy pages
+// toggle an extra product description for the dairy pages
 function toggleDescription() {
     let product = document.getElementById("more-description").style;
-    (product.display == "none") ? product.display = "block" : product.display = "none";
+    (product.display == "none") ? product.display = "block": product.display = "none";
 }
 
 // update unit price when type change occurs
@@ -24,22 +24,22 @@ function updateUnit(elem) {
 
     unitChoice.innerHTML = choice[0];
     eachPrice.innerHTML = "&#36;" + choicePrice + " /ea";
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity.value*choicePrice + "e+2") + "e-2")).toFixed(2);
+    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity.value * choicePrice + "e+2") + "e-2")).toFixed(2);
 }
 
-// update quantity subtotal price when quantity changes
+// update subtotal price and popup quantity when quantity changes
 function updateQuantity(elem) {
     let quantity = elem.value;
     let price = eachPrice.innerHTML.match(/\d+\.\d{2}/);
-    
-    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity*price + "e+2") + "e-2")).toFixed(2);
+
+    productSubtotal.innerHTML = "Subtotal: &#36;" + (+(Math.round(quantity * price + "e+2") + "e-2")).toFixed(2);
     popupQ.innerHTML = quantity;
 }
 
 // store the session product data
 function storeSession(productID) {
     let flavourSelectedIndex = (flavour) ? flavour.selectedIndex : -100;
-    let unitSelectedIndex = (size) ? size.selectedIndex : -100;   
+    let unitSelectedIndex = (size) ? size.selectedIndex : -100;
 
     let storedProduct = {
         name: productID,
@@ -55,7 +55,7 @@ function storeSession(productID) {
     window.sessionStorage.setItem(storedProduct.name, JSON.stringify(storedProduct));
 }
 
-// session data used if available upon initialization
+// initialize with session data if available
 function initSession(productName) {
     let storedProduct = window.sessionStorage.getItem(productName);
     if (storedProduct) {
@@ -68,7 +68,7 @@ function initSession(productName) {
         popupQ.innerHTML = storedProduct.popupQ;
         if (storedProduct.flavourSelectedIndex >= 0) {
             flavour.selectedIndex = storedProduct.flavourSelectedIndex;
-        } 
+        }
         if (storedProduct.unitSelectedIndex >= 0) {
             size.options.selectedIndex = storedProduct.unitSelectedIndex;
         }

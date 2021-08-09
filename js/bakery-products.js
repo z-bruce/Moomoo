@@ -23,3 +23,36 @@ function cartAlert() {
   // Temporarily lets user know that a product has been added to the cart.
   // Uses document value of quantity and innerHTML for product name.
 }
+
+function subtotal() {
+  var quantity = document.getElementById("quantity").value;
+  var subtotal = document.getElementById("subtotal");
+  var price = parseFloat(document.getElementById("unit-price").innerHTML);
+
+  subtotal.innerHTML = (quantity * price).toFixed(2);
+
+  // Calculates subtotal based on quantity and price per unit
+}
+
+function loadQty() {
+  var productName = document.getElementById("productName").innerHTML;
+  var qty = document.getElementById("quantity");
+
+  if (sessionStorage.getItem(productName)) {
+    qty.value = sessionStorage.getItem(productName);
+  }
+  subtotal();
+
+  // Adapted from Zack's JS code for loading saved session @ beverage-products.js
+  // Loads previously saved quantity when page is refreshed
+}
+
+function saveQty() {
+  var productName = document.getElementById("productName").innerHTML;
+  var qty = document.getElementById("quantity");
+
+  sessionStorage.setItem(productName, qty.value);
+
+  // Adapted from Zack's JS code for saving session @ beverage-products.js
+  // Saves quantity before page is unloaded
+}

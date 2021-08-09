@@ -76,6 +76,7 @@
             </div>
         </nav>
     </header>
+    <!-- Product section-->
     <main id="saint-augur-blue">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
@@ -102,22 +103,25 @@
                     <h6>Price Per Unit: &#36;5.19 / 100 g</h6>
                     <h5 id="each-price">&#36;6.49 /ea</h5>
                     <form action="" method="POST">
+                        <!-- Size control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="size"
                             onchange="updateUnit(this)">
                             <option value="75 g|3.89">Size - 75 g</option>
                             <option value="95 g|4.93">Size - 95 g</option>
                             <option value="125 g|6.49" selected>Size - 125 g</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
                             <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
                         <h4 id="product-subtotal">Subtotal: &#36;6.49</h4>
+                        <!-- Call to action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>
-                        <button type="button" class="btn btn-primary"
-                            data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
                         <!-- Pop up for add to cart -->
                         <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
                             aria-hidden="true">
@@ -133,13 +137,16 @@
                                         <p>Add <span id="popup-quantity">1</span> x Saint Aigur Blue to cart</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    <!--More Description/initially hidden-->
                     <div id="more-description" style="display:none">
                         <p>
                             Strong and spicy, Saint Augur Blue is made from pasturized cow's millk and imported from the
