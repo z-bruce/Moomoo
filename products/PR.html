@@ -1,274 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Metadata -->
-        <meta charset="utf-8" />
-        <meta name="author" content="Youngjae Kim 40169282" />
-        <meta name="description" content="P3 Product Page - Pork Ribs" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <title>Pork Ribs</title>
-        <link
-        rel="icon"
-        href="../images/icon-moo.png"
-        />
 
-       <!--Link Bootstrap 4 styling to document-->
-       <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous"
-       />
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="author" content="Youngjae Kim 40169282" />
+    <meta name="description" content="P3 Product Page - Pork Ribs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Pork Ribs</title>
+    <link rel="icon" href="../images/icon-moo.png" />
 
-       <!-- Link Google's Material Icons -->
-       <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
+    <!--Link Bootstrap 4 styling to document-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
-      <!-- Main styling sheet -->
-      <link
-          rel="stylesheet"
-          type="text/css"
-          href="../css/styles-universal.css"
-      />
-      <link rel="stylesheet" href="../css/p3-style.css" />
-      <style>
+    <!-- Link Google's Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- Main styling sheet -->
+    <link rel="stylesheet" type="text/css" href="../css/styles-universal.css" />
+    <link rel="stylesheet" href="../css/p3-style.css" />
+    <style>
         .jumbotron {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../images/pr.jpeg);
 
         }
     </style>
     <script type="text/javaScript" src="../js/meat-product.js"></script>
-    </head>
-    <body>
-        <!-- Navigation bar linking to home and menus -->
-        <header class="container-fluid">
-            <nav
-                class="navbar fixed-top navbar-expand-lg navbar-light bg-white"
-            >
-                <a class="navbar-brand" href="../index.html">
-                    <img
-                        src="../images/moomoologo.png"
-                        alt="MooMooGrocery Logo"
-                    />
-                </a>
+</head>
 
-                <!-- Button toggler to set navbar items into toggle for mobile pages -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarMenu"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body>
+    <!-- Navigation bar linking to home and menus -->
+    <header class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/moomoologo.png" alt="MooMooGrocery Logo" />
+            </a>
 
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Dropdown menu for aisles -->
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                id="navbarDropdown"
-                                role="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                href="#"
-                                >Aisles</a
-                            >
-                            <div
-                                class="dropdown-menu"
-                                aria-labelledby="navbarDropdown"
-                            >
-                                <a class="dropdown-item" href="../aisles/produce.html">Produce</a>
-                                <a class="dropdown-item" href="../aisles/bakery.html">Bakery</a>
-                                <a class="dropdown-item" href="../aisles/meat.html"
-                                    >Meat and Poultry</a
-                                >
-                                <a class="dropdown-item" href="../aisles/dairy.html"
-                                    >Dairy and Eggs</a
-                                >
-                                <a class="dropdown-item" href="../aisles/beverages.html">Beverages</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Login.html">Sign In</a>
-                        </li>
-                        <!-- Different color for register link -->
-                        <li class="nav-item">
-                            <a class="nav-link text-primary" href="../SignUp.html"
-                                >Register</a
-                            >
-                        </li>
-                        <!-- Icon for shopping cart -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cart.html">
-                                <span class="material-icons md-24"
-                                    >shopping_cart
-                                </span></a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-         <!-- Contain the name of the aisle in which the product is located. -->
-         <main>
-            <div class="jumbotron jumbotron-fluid" id="MeatAisle">
-                <div class="container-fluid">
-                    <h1 class="display-5 text-white">Meat &amp; Poultry</h1>
-                </div>
-            </div>
-            
-            <!-- Nav breadcrumbs to go back to upper directory -->
-            <nav aria-label="breadcrumb sticky-top">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="../aisles/meat.html">Meat &amp; Poultry</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                        Pork Ribs
+            <!-- Button toggler to set navbar items into toggle for mobile pages -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Dropdown menu for aisles -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" href="#">Aisles</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../aisles/produce.html">Produce</a>
+                            <a class="dropdown-item" href="../aisles/bakery.html">Bakery</a>
+                            <a class="dropdown-item" href="../aisles/meat.html">Meat and Poultry</a>
+                            <a class="dropdown-item" href="../aisles/dairy.html">Dairy and Eggs</a>
+                            <a class="dropdown-item" href="../aisles/beverages.html">Beverages</a>
+                        </div>
                     </li>
-                </ol>
-            </nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Login.html">Sign In</a>
+                    </li>
+                    <!-- Different color for register link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="../SignUp.html">Register</a>
+                    </li>
+                    <!-- Icon for shopping cart -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cart.html">
+                            <span class="material-icons md-24">shopping_cart
+                            </span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Contain the name of the aisle in which the product is located. -->
+    <main>
+        <div class="jumbotron jumbotron-fluid" id="MeatAisle">
             <div class="container-fluid">
-                <div class="row">
-                    <!-- Product image -->
-                    <div class="col-md-6" id="productImage">
-                        <img
-                            src="../images/pr.jpeg"
-                            class="img-fluid"
-                            alt="Image of product."
-                        />
-                    </div>
+                <h1 class="display-5 text-white">Meat &amp; Poultry</h1>
+            </div>
+        </div>
 
-                    <!-- Product description, pricing, quantity, add to cart button. -->
-                    <div class="col-md-6" id="productDescription">
-                        <h3>Pork Ribs</h3>
-                        <h5>500g</h5>
-                        <h6 style="color: #303841">
-                            Price Per Unit: $2.8 / 100 g
-                        </h6>
-                       
-                        <h5>$13.99/ea</h5> 
-                        
-                        <form action="" method="POST">
-                            <label>Flavour: <select id="flavor">
+        <!-- Nav breadcrumbs to go back to upper directory -->
+        <nav aria-label="breadcrumb sticky-top">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../aisles/meat.html">Meat &amp; Poultry</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Pork Ribs
+                </li>
+            </ol>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Product image -->
+                <div class="col-md-6" id="productImage">
+                    <img src="../images/pr.jpeg" class="img-fluid" alt="Image of product." />
+                </div>
+
+                <!-- Product description, pricing, quantity, add to cart button. -->
+                <div class="col-md-6" id="productDescription">
+                    <h3>Pork Ribs</h3>
+                    <h5>500g</h5>
+                    <h6 style="color: #303841">
+                        Price Per Unit: $2.8 / 100 g
+                    </h6>
+
+                    <h5>$13.99/ea</h5>
+
+                    <form action="" method="POST">
+                        <label>Flavour: <select id="flavor">
                                 <option>Original</option>
                                 <option>Barbeque</option>
                                 <option>Spicy</option>
                                 <option>Caramel</option>
-                               </select>
-                            </label>
-                            <div class="form-group w-25">
-                                <input
-                                    id="quantity2"
-                                    class="form-control form-control-lg"
-                                    type="number"
-                                    name="quantity"
-                                    min="1"
-                                    placeholder="1"
-                                    value="1"
-                                />
-                                <label for="quantity">Quantity</label>
-                                <h4>Subtotal:<span id="subtotal">$13.99</span></h4>
-                                <script>
-                                    // input to track
-                                    let quantity2 = document.getElementById("quantity2"); 
-                                    var subtotal = document.getElementById('subtotal');
-                                    var flavor = document.getElementById('flavor');
-
-                                    if (sessionStorage.getItem("autosave2")) {
-                                      // Restore a content of the input
-                                      quantity2.value = sessionStorage.getItem("autosave2");
-                                    }
-                                    if (sessionStorage.getItem("subtotal2")) {
-                                      // Restore a content of the input
-                                       subtotal.innerHTML= sessionStorage.getItem("subtotal2");
-                                    }
-                                    if (sessionStorage.getItem("PRflavor")) {
-                                      // Restore a content of the input
-                                       flavor.value= sessionStorage.getItem("PRflavor");
-                                    }
-                                   
-                                    // Listen for changes in the input field
-                                      quantity2.addEventListener("change", function() {
-                                      // save value into sessionStorage object 
-                                      sessionStorage.setItem("autosave2", quantity2.value);
-                                      subtotal.innerHTML= '$'+parseFloat(quantity2.value*13.99).toFixed(2);
-                                      sessionStorage.setItem("subtotal2", subtotal.innerHTML);
-                                    });
-                                    flavor.addEventListener("change", function(){
-                                        sessionStorage.setItem("PRflavor", flavor.value);
-                                      });
-                                  </script>
+                            </select>
+                        </label>
+                        <div class="form-group w-25">
+                            <input id="quantity2" class="form-control form-control-lg" type="number" name="quantity"
+                                min="1" placeholder="1" value="1" />
+                            <label for="quantity">Quantity</label>
+                            <h4>Subtotal:<span id="subtotal">$13.99</span></h4>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More
+                            Description</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
+                        <!-- Pop up for add to cart -->
+                        <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ProductLabel">Pork Ribs</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Add <span id="popup-quantity">1</span> x Pork Ribs to cart</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
+                                    </div>
+                                </div>
                             </div>
-                            <button type="button" class="btn btn-outline-dark" onclick="showdescription()">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" onclick="alert(document.getElementById('quantity2').value+' Pork Ribs has been added to the cart!!');"/>
-                            <p id="description" style="margin: 10px; font-style: italic; display: none;">Pork ribs of pastured American pigs<br> <span style="color:gray; font-size:smaller;"> serial number: 40167785</span>  </p>
-                        </form>
-  
-                    </div>
+                        </div>
+                        <p id="description" style="margin: 10px; font-style: italic; display: none;">Pork ribs of
+                            pastured American pigs<br> <span style="color:gray; font-size:smaller;"> serial number:
+                                40167785</span> </p>
+                    </form>
+
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Footer -->
-        <footer class="container footer">
-            <nav class="nav justify-content-center">
-                <a
-                    class="nav-link"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    >Facebook</a
-                >
-                <a
-                    class="nav-link"
-                    href="https://twitter.com/?lang=en"
-                    target="_blank"
-                    >Twitter</a
-                >
-                <a
-                    class="nav-link"
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    >Instagram</a
-                >
-                <a
-                    class="nav-link"
-                    href="https://www.pinterest.ca/"
-                    target="_blank"
-                    >Pinterest</a
-                >
-            </nav>
-            <p class="card-text">
-                <small class="text-muted"
-                    >Photos contributors:
-                    <a href="https://www.pexels.com/@pascal-claivaz-66964">pascal claivaz</a>
-                    on
-                    <a
-                        href="https://www.pexels.com/photo/grilled-meat-410648/"
-                        >Pexels</a
-                    >
-                </small>
-            </p>
-        </footer>
-         <!-- Bootstrap JavaScript -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-      </script>
-      
-        
+    <!-- Footer -->
+    <footer class="container footer">
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a class="nav-link" href="https://twitter.com/?lang=en" target="_blank">Twitter</a>
+            <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a class="nav-link" href="https://www.pinterest.ca/" target="_blank">Pinterest</a>
+        </nav>
+        <p class="card-text">
+            <small class="text-muted">Photos contributors:
+                <a href="https://www.pexels.com/@pascal-claivaz-66964">pascal claivaz</a>
+                on
+                <a href="https://www.pexels.com/photo/grilled-meat-410648/">Pexels</a>
+            </small>
+        </p>
+    </footer>
+    <script>
+        // input to track
+        let quantity2 = document.getElementById("quantity2");
+        var subtotal = document.getElementById('subtotal');
+        var flavor = document.getElementById('flavor');
+        var popupQuantity = document.getElementById('popup-quantity');
 
-    </body>
+        if (sessionStorage.getItem("autosave2")) {
+            // Restore a content of the input
+            quantity2.value = sessionStorage.getItem("autosave2");
+            popupQuantity.innerHTML = sessionStorage.getItem("autosave2");
+        }
+        if (sessionStorage.getItem("subtotal2")) {
+            // Restore a content of the input
+            subtotal.innerHTML = sessionStorage.getItem("subtotal2");
+        }
+        if (sessionStorage.getItem("PRflavor")) {
+            // Restore a content of the input
+            flavor.value = sessionStorage.getItem("PRflavor");
+        }
+
+        // Listen for changes in the input field
+        quantity2.addEventListener("change", function () {
+            // save value into sessionStorage object 
+            sessionStorage.setItem("autosave2", quantity2.value);
+            subtotal.innerHTML = '$' + parseFloat(quantity2.value * 13.99).toFixed(2);
+            popupQuantity.innerHTML = quantity2.value;
+            sessionStorage.setItem("subtotal2", subtotal.innerHTML);
+        });
+        flavor.addEventListener("change", function () {
+            sessionStorage.setItem("PRflavor", flavor.value);
+        });
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+
+
+</body>
+
 </html>
