@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
 
 <head>
     <meta charset="utf-8">
@@ -28,14 +28,15 @@
         .product-size {
             width: fit-content;
         }
-        
+
         h6 {
             color: #303841;
         }
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" onload="initSession('nutri-omega-3-white')"
+    onbeforeunload="storeSession('nutri-omega-3-white')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -75,7 +76,8 @@
             </div>
         </nav>
     </header>
-    <main>
+    <!-- Product section -->
+    <main id="nutri-omega-3-white">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
                 <h1 class="display-5 text-white">Egg Products</h1>
@@ -97,25 +99,61 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Nutri Omega-3 White</h3>
-                    <h5>12 EA</h5>
+                    <h5 id="unit-choice"></h5>
                     <h6>Price Per Unit: &#36;0.40 / ea</h6>
-                    <p>
-                        Omega-3 free range eggs. The hens that produce these eggs are fed organic feed in a Quebec free
-                        farm.
-                    </p>
-                    <h5>&#36;4.79</h5>
+                    <h5>&#36;<span id="each-price"></span></h5>
                     <form action="" method="POST">
-                        <select class="custom-select custom-select-lg mb-3 product-size">
-                            <option selected>Size - 12 ea</option>
-                            <option value="1">Size - 18 ea</option>
+                        <!-- Size control -->
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="size"
+                            onchange="updateUnit(this)">
+                            <option value="12 EA|4.79" selected>Size - 12 ea</option>
+                            <option value="18 EA|7.20">Size - 18 ea</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1"
+                                id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
-                    </form> 
+                        <h4>Subtotal: &#36;<span id="product-subtotal"></span></h4>
+                        <!-- Call to action buttons -->
+                        <button type="button" class="btn btn-outline-dark" id="desc-btn"
+                            onclick="toggleDescription()">More Description</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
+                        <!-- Pop up for add to cart -->
+                        <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ProductLabel">Nutri Omega-3 White</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Add <span id="popup-quantity">1</span> x Nutri Omega-3 White to cart</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- More description/initially hidden -->
+                    <div id="more-description" style="display:none">
+                        <p>
+                            Omega-3 free range eggs. The hens that produce these eggs are fed organic feed in a Quebec
+                            free
+                            farm.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Serial #: 09876511</small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,6 +176,9 @@
             </small>
         </p>
     </footer>
+
+    <!--Dairy Products JavaScript -->
+    <script type="text/javaScript" src="../js/dairy-products.js"></script>
 
     <!-- Optional JavaScript functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

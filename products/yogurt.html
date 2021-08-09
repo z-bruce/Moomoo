@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
 
 <head>
     <meta charset="utf-8">
@@ -28,14 +28,15 @@
         .product-size {
             width: fit-content;
         }
-        
+
         h6 {
             color: #303841;
         }
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" onload="initSession('chobani-greek-yogurt')"
+    onbeforeunload="storeSession('chobani-greek-yogurt')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -75,7 +76,8 @@
             </div>
         </nav>
     </header>
-    <main>
+    <!-- Product section -->
+    <main id="chobani-greek-yogurt">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
                 <h1 class="display-5 text-white">Milk Products</h1>
@@ -97,31 +99,68 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Chobani Greek Yogurt</h3>
-                    <h5>4 x 100 g</h5>
+                    <h5 id="unit-choice"></h5>
                     <h6>Price Per Unit: &#36;1.05 / 100 g</h6>
-                    <p>
-                        Advanced nutrition yogurt that’s lactose-free and easy to digest. In addition to being high in
-                        protein, it's crafted with real fruit and only natural ingredients.
-                    </p>
-                    <h5>&#36;6.99</h5>
+                    <h5>&#36;<span id="each-price"></span> /ea</h5>
                     <form action="" method="POST">
-                        <select class="custom-select custom-select-lg mb-3 product-size">
+                        <!-- Flavour control -->
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="flavour">
                             <option selected>Flavour - Blueberry</option>
                             <option value="1">Flavour - Strawberry</option>
                             <option value="2">Flavour - Blackberry</option>
                         </select>
-                        <select class="custom-select custom-select-lg mb-3 product-size">
-                            <option selected>Size - 4 x 100 g</option>
-                            <option value="1">Size - 8 x 100 g</option>
-                            <option value="2">Size - 12 x 100 g</option>
+                        <!-- Size control -->
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="size"
+                            onchange="updateUnit(this)">
+                            <option value="4 x 100 g|6.99" selected>Size - 4 x 100 g</option>
+                            <option value="8 x 100 g|8.40">Size - 8 x 100 g</option>
+                            <option value="12 x 100 g|12.60">Size - 12 x 100 g</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1"
+                                id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
-                    </form> 
+                        <h4>Subtotal: &#36;<span id="product-subtotal"></span></h4>
+                        <!-- Call to action buttons -->
+                        <button type="button" class="btn btn-outline-dark" id="desc-btn"
+                            onclick="toggleDescription()">More Description</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
+                        <!-- Pop up for add to cart -->
+                        <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ProductLabel">Chobani Greek Yogurt</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Add <span id="popup-quantity">1</span> x Chobani Greek Yogurt to cart</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- More description/initially hidden -->
+                    <div id="more-description" style="display:none">
+                        <p>
+                            Advanced nutrition yogurt that’s lactose-free and easy to digest. In addition to being high
+                            in
+                            protein, it's crafted with real fruit and only natural ingredients.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Serial #: 09876511</small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,6 +183,9 @@
             </small>
         </p>
     </footer>
+
+    <!--Dairy Products JavaScript -->
+    <script type="text/javaScript" src="../js/dairy-products.js"></script>
 
     <!-- Optional JavaScript functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

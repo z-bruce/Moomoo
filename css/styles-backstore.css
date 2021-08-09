@@ -51,7 +51,7 @@ select {
 
 /* Header */
 .backstore-header {
-  border-color: #D72323;
+  border-color: #d72323;
   border-style: none none solid none;
   border-width: 1px;
 }
@@ -88,19 +88,19 @@ select {
 }
 
 .navbar-item:hover {
-  background-color: #D72323;
+  background-color: #d72323;
   border-radius: 5px;
   color: white;
 }
 
 .backstore-vertical-navbar a.active {
-  background-color: #D72323;
+  background-color: #d72323;
   border-radius: 5px;
   color: white;
 }
 
 .backstore-vertical-navbar a:hover:not(.active) {
-  background-color: #D75A5A;
+  background-color: #d75a5a;
   border-radius: 5px;
   color: white;
 }
@@ -121,7 +121,7 @@ select {
   display: block;
   font-size: medium;
   padding: 8px;
-  width:100%
+  width: 100%;
 }
 
 .properties-row {
@@ -166,11 +166,11 @@ select {
 }
 
 .backstore-list a.edit-button:hover {
-  background-color: #1089FF;
+  background-color: #1089ff;
 }
 
 .backstore-list a:hover {
-  background-color: #D72323;
+  background-color: #d72323;
   border-radius: 5px;
   color: white;
 }
@@ -192,31 +192,55 @@ select {
 }
 
 .page-numbers a.active {
-  background-color: #D72323;
+  background-color: #d72323;
   border-radius: 5px;
   color: white;
 }
 
 .page-numbers a:hover:not(.active) {
-  background-color: #D75A5A;
+  background-color: #d75a5a;
   border-radius: 5px;
   color: white;
 }
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 
   .backstore-vertical-navbar {
     font-size: inherit;
@@ -250,6 +274,6 @@ select {
   }
 
   .hide-mobile {
-    display: table-cell;
+    display: none;
   }
 }

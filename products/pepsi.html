@@ -21,9 +21,12 @@
   <link rel="stylesheet" type="text/css" href="../css/styles-universal.css" />
   <link rel="stylesheet" href="../css/p3-style.css" />
 
+  <!-- JavaScript -->
+  <script type="text/javaScript" src="../js/beverage-products.js"></script>
+
 </head>
 
-<body>
+<body onload="loadQty()" onbeforeunload="saveQty()">
   <!-- Navigation bar linking to home and menus -->
   <header class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -94,21 +97,46 @@
 
         <!-- Product description, pricing, quantity, add to cart button. -->
         <div class="col-md-6" id="productDescription">
-          <h3>Pepsi</h3>
+          <h3 id="productName">Pepsi</h3>
           <h5>12 x 355 mL</h5>
           <h6>&#36;0.188 / 100 mL</h6>
-          <p>
-            Cola flavoured soft drink.
-          </p>
-          <h5>&#36;7.99</h5>
+          <h5>&#36;<span id="unit-price">7.99</span> /ea</h5>
           <form action="" method="POST">
             <div class="form-group w-25">
-              <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+              <input id="quantity" class="form-control form-control-lg" type="number" name="quantity" min="1" value="1" onchange="calculateSubtotal()"/>
               <label for="quantity">Quantity</label>
             </div>
-            <button type="button" class="btn btn-outline-dark">More Description</button>
-            <input type="submit" class="btn btn-primary" value="Add to Cart" />
+            <h4>Subtotal: &#36;<span id="subtotal"></span></h4>
+            <button type="button" class="btn btn-outline-dark" onclick="moreDescription()">More Description</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+            <!-- Pop up for add to cart -->
+            <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ProductLabel">Pepsi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Add <span id="popup-quantity">1</span> x Pepsi to cart</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                        </div>
+                    </div>
+                </div>
+            </div>
           </form>
+          <div id="more-description" style="margin: 10px; display: none;">
+            <p>
+              Cola flavoured soft drink.
+              <p style="color: gray; font-size: smaller;">Serial Number: 889656753108</p>
+            </p>
+          </div>
         </div>
       </div>
     </div>

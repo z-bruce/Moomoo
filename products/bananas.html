@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../css/p3-style.css" />
     </head>
 
-    <body>
+    <body  onload="loadQty()" onbeforeunload="saveQty()">
         <!-- Navigation bar linking to home and menus -->
         <header class="container-fluid">
             <nav
@@ -149,28 +149,64 @@
 
                     <!-- Product description, pricing, quantity, add to cart button. -->
                     <div class="col-md-6" id="productDescription">
-                        <h3>Banana</h3>
+                        <h3 id="product-name">Banana</h3>
                         <h5>0.15 - 0.23kg</h5>
                         <h6>$1.23/1kg</h6>
-                        <p>
-                            Bananas are a favourite breakfast choice or snack, at anytime of the day since they are soft, sweet, and delicious.
-                            The bright yellow peel provides natural protection while keeping the fruit and serves as a good indicator of when it's time to consume it!
-                        </p>
-                        <h5>$0.28</h5>
+                        <h5>$<span id="price">0.28</span> / ea</h5>
                         <form action="" method="POST">
                             <div class="form-group w-25">
                                 <input
                                     class="form-control form-control-lg"
                                     type="number"
                                     name="quantity"
+                                    id="quantity"
                                     min="1"
                                     placeholder="1"
+                                    value=1;
+                                    onchange="subtot()"
                                 />
                                 <label for="quantity">Quantity</label>
                             </div>
-                            <button type="button" class="btn btn-outline-dark">More Description</button>
-                            <input type="submit" class="btn btn-primary" value="Add to Cart" />
-                        </form>  
+
+                            <h4>Sub-total: $<span id="subtotal">0.28</span></h4>
+
+                            <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                                
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add to Cart </button>
+                            <!-- Pop up for add to cart -->
+                               <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                               aria-hidden="true">
+                               <div class="modal-dialog">
+                                   <div class="modal-content">
+                                       <div class="modal-header">
+                                           <h5 class="modal-title" id="ProductLabel">Banana</h5>
+                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                               <span aria-hidden="true">&times;</span>
+                                           </button>
+                                       </div>
+                                       <div class="modal-body">
+                                           <p>Add <span id="popup-quantity">1</span> x Banana to cart</p>
+                                       </div>
+                                       <div class="modal-footer">
+                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                           <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                       </div>
+                                   </div>
+                               </div>
+                               </div>
+
+                                <div id="more-description" style="display:none;" >
+
+                                <p id="banana-description" style="text-align:justify;">
+                                    Bananas are a favourite breakfast choice or snack, at anytime of the day since they are soft, sweet, and delicious.
+                                    The bright yellow peel provides natural protection while keeping the fruit and serves as a good indicator of when it's time to consume it!
+                                 </p>
+
+                                 <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                                </div>
+
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -218,4 +254,8 @@
             crossorigin="anonymous"
         ></script>
     </body>
+
+     <!--Krishna's Javascript-->
+     <script type="text/javascript" src="../js/produce-products.js">
+     </script>
 </html>

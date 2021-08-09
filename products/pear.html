@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/p3-style.css" />
 </head>
 
-<body>
+<body  onload="loadQty()" onbeforeunload="saveQty()">
     <!-- Navigation bar linking to home and menus -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -98,21 +98,61 @@
 
                 <!-- Product description, pricing, quantity, add to cart button. -->
                 <div class="col-md-6" id="productDescription">
-                    <h3>Pear</h3>
+                    <h3 id="product-name">Pear</h3>
                     <h5>0.17 - 0.20kg</h5>
                     <h6>$4.34/1kg</h6>
-                    <p>
-                        Pears will give every fruit dish a distinct flavour. They deliver delicious sweetness.
-                        Salad dressings, preserves, and chutneys can be made using them.
-                    </p>
-                    <h5>$0.87</h5>
+                    <h5>$<span id="price">0.87</span> / ea</h5>
                     <form action="" method="POST">
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input
+                                class="form-control form-control-lg"
+                                type="number"
+                                name="quantity"
+                                id="quantity"
+                                min="1"
+                                value=1; 
+                                placeholder="1"
+                                onchange="subtot()"
+                            />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
+
+                        <h4>Sub-total: $<span id="subtotal">0.87</span></h4>
+
+                        <button type="button" class="btn btn-outline-dark" onclick="showDescription()">More Description</button>
+                           
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add to Cart </button>
+                        <!-- Pop up for add to cart -->
+                           <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                           aria-hidden="true">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h5 class="modal-title" id="ProductLabel">Pear</h5>
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                           <span aria-hidden="true">&times;</span>
+                                       </button>
+                                   </div>
+                                   <div class="modal-body">
+                                       <p>Add <span id="popup-quantity">1</span> x Pear to cart</p>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                       <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                   </div>
+                               </div>
+                           </div>
+                           </div>
+
+                          <div id="more-description" style="display:none;" >
+                            <p id="pear-description" style="text-align:justify;">
+                                Pears will give every fruit dish a distinct flavour. They deliver delicious sweetness.
+                                Salad dressings, preserves, and chutneys can be made using them.
+                             </p>
+
+                             <p style="color:#dbd8d7; font:10%;">Serial #: 02991308</p>
+                            </div>   
+
                     </form>
                 </div>
             </div>
@@ -137,5 +177,9 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 </body>
+
+<!--Krishna's Javascript-->
+<script type="text/javascript" src="../js/produce-products.js">
+</script>
 
 </html>

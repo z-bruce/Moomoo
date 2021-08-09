@@ -71,25 +71,25 @@ main {
 
 @media (min-width: 576px) {
     .footer {
-        max-width: 98%;
+        max-width: 99%;
     }
 }
 
 @media (min-width: 768px) {
     .footer {
-        max-width: 98%;
+        max-width: 99%;
     }
 }
 
 @media (min-width: 992px) {
     .footer {
-        max-width: 98%;
+        max-width: 99%;
     }
 }
 
 
 @media (min-width: 1200px) {
     .footer {
-        max-width: 98%;
+        max-width: 99%;
     }
 }

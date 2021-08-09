@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -35,7 +35,8 @@
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" onload="initSession('saint-augur-blue')"
+    onbeforeunload="storeSession('saint-augur-blue')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -75,7 +76,8 @@
             </div>
         </nav>
     </header>
-    <main>
+    <!-- Product section-->
+    <main id="saint-augur-blue">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
                 <h1 class="display-5 text-white">Cheese Products</h1>
@@ -97,30 +99,66 @@
                 </div>
                 <div class="col-md-6" id="productDescription">
                     <h3>Saint Augur Blue</h3>
-                    <h5>125 g</h5>
+                    <h5 id="unit-choice"></h5>
                     <h6>Price Per Unit: &#36;5.19 / 100 g</h6>
-                    <p>
-                        Strong and spicy, Saint Augur Blue is made from pasturized cow's millk and imported from the
-                        village of Beauzac in France.
-                        Aged for 60 days.
-                    </p>
-                    <h5>&#36;6.49</h5>
+                    <h5>&#36;<span id="each-price"></span> /ea</h5>
                     <form action="" method="POST">
-                        <select class="custom-select custom-select-lg mb-3 product-size">
-                            <option value="1">Size - 75 g</option>
-                            <option value="2">Size - 95 g</option>
-                            <option selected>Size - 125 g</option>
+                        <!-- Size control -->
+                        <select class="custom-select custom-select-lg mb-3 product-size" id="size"
+                            onchange="updateUnit(this)">
+                            <option value="75 g|3.89">Size - 75 g</option>
+                            <option value="95 g|4.93">Size - 95 g</option>
+                            <option value="125 g|6.49" selected>Size - 125 g</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
-                            <input class="form-control form-control-lg" type="number" name="quantity" min="1" placeholder="1" />
+                            <input class="form-control form-control-lg" type="number" name="quantity" min="1"
+                                id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
-                        <button type="button" class="btn btn-outline-dark">More Description</button>
-                        <input type="submit" class="btn btn-primary" value="Add to Cart" />
+                        <h4>Subtotal: &#36;<span id="product-subtotal"></span></h4>
+                        <!-- Call to action buttons -->
+                        <button type="button" class="btn btn-outline-dark" id="desc-btn"
+                            onclick="toggleDescription()">More Description</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
+                        <!-- Pop up for add to cart -->
+                        <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ProductLabel">Saint Aigur Blue</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Add <span id="popup-quantity">1</span> x Saint Aigur Blue to cart</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                    <!--More Description/initially hidden-->
+                    <div id="more-description" style="display:none">
+                        <p>
+                            Strong and spicy, Saint Augur Blue is made from pasturized cow's millk and imported from the
+                            village of Beauzac in France.
+                            Aged for 60 days.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Serial #: 09876511</small></p>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
 
     <!-- Footer -->
@@ -140,6 +178,9 @@
             </small>
         </p>
     </footer>
+
+    <!--Dairy Products JavaScript -->
+    <script type="text/javaScript" src="../js/dairy-products.js"></script>
 
     <!-- Optional JavaScript functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
