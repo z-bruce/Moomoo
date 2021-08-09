@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100" onload="initSession('brown-eggs')"
-onbeforeunload="storeSession('brown-eggs')">
+    onbeforeunload="storeSession('brown-eggs')">
     <!-- header section with nav bar -->
     <header class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -76,6 +76,7 @@ onbeforeunload="storeSession('brown-eggs')">
             </div>
         </nav>
     </header>
+    <!-- Product section -->
     <main id="brown-eggs">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
@@ -102,21 +103,24 @@ onbeforeunload="storeSession('brown-eggs')">
                     <h6>Price Per Unit: &#36;0.33 / ea</h6>
                     <h5 id="each-price">&#36;4.69 /ea</h5>
                     <form action="" method="POST">
+                        <!-- Size control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="size"
                             onchange="updateUnit(this)">
                             <option value="12 EA|4.69" selected>Size - 12 ea</option>
                             <option value="18 EA|5.94">Size - 18 ea</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
                             <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
                         <h4 id="product-subtotal">Subtotal: &#36;4.69</h4>
+                        <!-- Call to action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>
-                        <button type="button" class="btn btn-primary"
-                            data-toggle="modal" data-target="#addedModal">Add to Cart</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
+                            to Cart</button>
                         <!-- Pop up for add to cart -->
                         <div class="modal fade" id="addedModal" tabindex="-1" aria-labelledby="ProductLabel"
                             aria-hidden="true">
@@ -132,20 +136,24 @@ onbeforeunload="storeSession('brown-eggs')">
                                         <p>Add <span id="popup-quantity">1</span> x Nutri Brown Eggs to cart</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <input type="submit" class="btn btn-primary" id="add-cart-btn" value="Confirm" />
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-primary" id="add-cart-btn"
+                                            value="Confirm" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    <!-- More description/initially hidden -->
                     <div id="more-description" style="display:none">
                         <p>
-                            Organic free range eggs. The hens that produce these eggs are fed organic feed in a Quebec free
+                            Organic free range eggs. The hens that produce these eggs are fed organic feed in a Quebec
+                            free
                             farm.
                         </p>
                         <p class="card-text"><small class="text-muted">Serial #: 09876511</small></p>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

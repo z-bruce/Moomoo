@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
 
 <head>
     <meta charset="utf-8">
@@ -76,6 +76,7 @@
             </div>
         </nav>
     </header>
+    <!-- Product section -->
     <main id="swiss-gruyere">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
@@ -102,6 +103,7 @@
                     <h6>Price Per Unit: &#36;2.65 / 100 g</h6>
                     <h5 id="each-price">&#36;10.60 /ea</h5>
                     <form action="" method="POST">
+                        <!-- Size control -->
                         <select class="custom-select custom-select-lg mb-3 product-size" id="size"
                             onchange="updateUnit(this)">
                             <option value="100 g|2.65">Size - 100 g</option>
@@ -109,12 +111,14 @@
                             <option value="400 g|10.60" selected>Size - 400 g</option>
                             <option value="600 g|15.90">Size - 600 g</option>
                         </select>
+                        <!-- Quantity control -->
                         <div class="form-group w-25">
                             <input class="form-control form-control-lg" type="number" name="quantity" min="1" value="1"
                                 id="quantity" onchange="updateQuantity(this)" />
                             <label for="quantity">Quantity</label>
                         </div>
                         <h4 id="product-subtotal">Subtotal: &#36;6.49</h4>
+                        <!-- Call to action buttons -->
                         <button type="button" class="btn btn-outline-dark" id="desc-btn"
                             onclick="toggleDescription()">More Description</button>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addedModal">Add
@@ -143,6 +147,7 @@
                             </div>
                         </div>
                     </form>
+                    <!-- More description/initially hidden -->
                     <div id="more-description" style="display:none">
                         <p>
                             Sharp and flavourful, Swiss Gruyere is made from raw cow's millk and imported from
